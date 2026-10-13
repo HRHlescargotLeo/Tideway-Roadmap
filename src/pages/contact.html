@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us – Tideway prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 3 of 5 · What's happening near me · Contact</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A contact form that asks what the enquiry is about before anything else, sends it to the right team (or to Thames Water, with their details, if it's theirs now), asks which site and postcode, lets people add a photo, and finishes with a reference number and a clear promise of when they'll hear back.</p></div>
+          <div><h2>Why</h2><p>The live form has four inputs: name, email, message and a Yes/No consent choice. It doesn't ask what the enquiry is about or where, so every message arrives in one pile and someone has to read it to route it. The reply times residents are promised (five working days, ten at most) are on Help &amp; Advice, not on the form they've just filled in.</p></div>
+        </div>
+        <p class="proposal-foot">Opens with a topic and site already chosen from other pages, for example ?topic=works&amp;site=chambers-wharf. The complaint acknowledgement time is a placeholder.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <span class="eyebrow">Neighbours</span>
+        <h1>Contact us</h1>
+        <p class="lead">For something urgent, call the 24-hour helpdesk on 08000 30 80 80.</p>
+      </div>
+    </div>
+
+    <div class="container" id="contact-app" style="padding-top:2rem;max-width:820px">
+      <ol class="stepper"><li class="current">What it's about</li><li>Where</li><li>Your details</li></ol>
+
+      <!-- Step 1: topic (R38) -->
+      <div class="step-panel">
+        <h2 class="section-title">What's it about?</h2>
+        <fieldset class="field" id="ct-topic-fs">
+          <legend class="visually-hidden">Topic</legend>
+          <div class="option-cards" id="ct-topics"></div>
+          <span class="field-error" hidden>Choose what your enquiry is about</span>
+        </fieldset>
+        <div class="step-nav row"><button type="button" class="btn" data-ct="1">Continue</button></div>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>The topic decides who receives the enquiry. Anything that's now Thames Water's is shown their contact details instead of the form.</p>
+      </div>
+
+      <!-- Step 2: where -->
+      <div class="step-panel" hidden>
+        <h2 class="section-title">Where?</h2>
+        <div id="ct-thames" hidden class="route-card">
+          <span class="owner">Thames Water</span>
+          <h3>This one is for Thames Water</h3>
+          <p>Thames Water now operates the tunnel. For a smell, or sewage in the river, contact them directly so it reaches the team who can act on it.</p>
+          <div class="contact-lines"><span>Thames Water: [number to confirm]</span><span>Pollution in the river: Environment Agency, 0800 80 70 60 (24 hours)</span></div>
+          <div class="row"><button type="button" class="btn btn-secondary" data-ct="back1">Choose a different topic</button></div>
+        </div>
+        <div id="ct-details" class="stack">
+          <div class="field"><label for="ct-site">Which site is it about?</label><select id="ct-site"></select></div>
+          <div class="field"><label for="ct-postcode">Your postcode <span class="muted">(optional)</span></label><input type="text" id="ct-postcode" autocomplete="postal-code" style="max-width:12rem"><span class="field-hint">Helps us work out which site is involved.</span><span class="field-error" hidden>Enter a full postcode, like SE16 4ND</span></div>
+          <div class="field"><label for="ct-photo">Add a photo <span class="muted">(optional)</span></label><input type="file" id="ct-photo" accept="image/*"></div>
+          <div class="step-nav row"><button type="button" class="btn btn-secondary" data-ct="back1">Back</button><button type="button" class="btn" data-ct="2">Continue</button></div>
+        </div>
+      </div>
+
+      <!-- Step 3: details -->
+      <div class="step-panel" hidden>
+        <h2 class="section-title">Your details</h2>
+        <form id="ct-form" novalidate class="stack">
+          <div class="form-grid">
+            <div class="field"><label for="ct-name">Full name</label><input type="text" id="ct-name" required autocomplete="name"><span class="field-error" hidden>Enter your name</span></div>
+            <div class="field"><label for="ct-email">Email</label><input type="email" id="ct-email" required autocomplete="email"><span class="field-error" hidden>Enter an email address, like name@example.com</span></div>
+            <div class="field"><label for="ct-phone">Phone <span class="muted">(optional)</span></label><input type="tel" id="ct-phone" autocomplete="tel"></div>
+            <div class="field full"><label for="ct-msg">Tell us what's happening</label><textarea id="ct-msg" rows="5" required></textarea><span class="field-hint">Include when it happened and how often, if it's ongoing.</span><span class="field-error" hidden>Tell us a little about your enquiry</span></div>
+          </div>
+          <div class="field"><label class="check"><input type="checkbox" id="ct-consent" required> I agree to Tideway storing my details to deal with this enquiry, and sharing them with its contractors if needed. <a href="#">Privacy notice</a></label><span class="field-error" hidden>Tick to agree, so we can reply to you</span></div>
+          <div class="step-nav row"><button type="button" class="btn btn-secondary" data-ct="back2">Back</button><button type="submit" class="btn">Send</button></div>
+        </form>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>The consent tick replaces the Yes/No radio choice on the live form, where "No" can be submitted.</p>
+      </div>
+
+      <!-- Done -->
+      <div class="step-panel" hidden>
+        <div class="confirm-box">
+          <div class="tick" aria-hidden="true">✓</div>
+          <h2>We've got your message</h2>
+          <p>Your reference is <strong id="ct-ref">TW-260000</strong>.</p>
+          <dl class="kv" style="max-width:520px;margin:1rem auto;text-align:left">
+            <dt>About</dt><dd id="ct-about"></dd>
+            <dt>Going to</dt><dd id="ct-team"></dd>
+            <dt>Reply within</dt><dd id="ct-reply"></dd>
+            <dt>Confirmation sent to</dt><dd id="ct-done-email"></dd>
+          </dl>
+          <p class="muted">If anything changes, reply to the confirmation email and quote your reference.</p>
+          <div class="row" style="justify-content:center"><a class="btn btn-secondary" href="#">How we handle complaints</a><a class="btn btn-secondary" href="#">Compensation: step by step</a></div>
+        </div>
+        <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Links to the help guides (complaints and compensation) written as steps with timescales (R39).</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/tideway.js"></script>
+</body>
+</html>

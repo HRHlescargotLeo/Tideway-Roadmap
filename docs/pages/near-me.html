@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's happening near me – Tideway prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Tideway's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="Tideway prototypes, overview">tideway <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/home.html" data-proto="home who-does-what"><span class="n">1</span> It's working</a></li>
+          <li><a href="../pages/river-health.html" data-proto="river-health overflow"><span class="n">2</span> River health</a></li>
+          <li><a href="../pages/near-me.html" data-proto="near-me site contact"><span class="n">3</span> Near me</a></li>
+          <li><a href="../pages/riverside.html" data-proto="riverside space"><span class="n">4</span> Visit the riverside</a></li>
+          <li><a href="../pages/documents.html" data-proto="documents"><span class="n">5</span> Find a document</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 3 of 5 · What's happening near me</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A postcode lookup that lists Tideway's 24 sites nearest first, says plainly whether each one still has works, is now a public space or is simply complete, and leads to a site page with dated notices, update alerts and a contact form that sends the enquiry to the right people.</p></div>
+          <div><h2>Why</h2><p>The live lookup took the postcode SE16 4ND, showed "Your Location: SE1 9PX" and left the sites in west-to-east order, so the nearest wasn't obvious. Site pages are written for the construction years: Chambers Wharf's works update refers to Summer 2024 and Spring 2025, and residents are asked to email an address to get updates. Fewer sites now have works, which makes it more important, not less, that the ones that do are easy to find and easy to follow.</p></div>
+        </div>
+        <p class="proposal-foot">Site names and boroughs are from tideway.london. Statuses are sample data. Postcodes are matched by district in this prototype; a live build would use a postcode service.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <span class="eyebrow">Neighbours</span>
+        <h1>What's happening near me</h1>
+        <p class="lead">Find your nearest Tideway sites, see whether there's anything still going on, and sign up for updates.</p>
+      </div>
+    </div>
+
+    <div class="container" id="nearme-app" style="padding-top:2rem">
+      <!-- Lookup (R30) -->
+      <section aria-labelledby="lk-title">
+        <h2 class="visually-hidden" id="lk-title">Search by postcode</h2>
+        <form id="nm-form" class="lookup" novalidate>
+          <div class="field"><label for="nm-postcode">Postcode</label><input type="text" id="nm-postcode" autocomplete="postal-code" placeholder="For example SE16 4ND"></div>
+          <button class="btn" type="submit">Find sites</button>
+          <button class="btn btn-secondary" type="button" id="nm-locate">Use my location</button>
+        </form>
+        <p class="field-error" id="nm-msg" hidden role="alert"></p>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Try SE16 4ND, SW11, W6 or E14. Results re-sort by distance and the nearest is highlighted on the map. "Use my location" asks the browser for permission; here it uses a sample location.</p>
+      </section>
+
+      <!-- Filters (R32) -->
+      <div class="chip-row" role="group" aria-label="Filter by status">
+        <span class="wf-meta">Show</span>
+        <button type="button" class="chip" aria-pressed="true" data-status="all">All sites</button>
+        <button type="button" class="chip" aria-pressed="false" data-status="works">Works continuing</button>
+        <button type="button" class="chip" aria-pressed="false" data-status="space">Public space open</button>
+        <button type="button" class="chip" aria-pressed="false" data-status="operating">Operating, complete</button>
+        <span class="seg view-toggle" role="group" aria-label="View" style="margin-left:auto"><button type="button" aria-pressed="true" data-view="list">List</button><button type="button" aria-pressed="false" data-view="map">Map</button></span>
+      </div>
+      <p class="wf-meta" id="nm-count" aria-live="polite"></p>
+
+      <!-- Map and list (R31) -->
+      <div class="map-view" data-view="list" style="margin-top:.75rem">
+        <div class="map-canvas" id="nm-map">
+          <div class="wf-placeholder">Map of the Thames from Acton to Beckton</div>
+          <svg class="river-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="" vector-effect="non-scaling-stroke"/></svg>
+        </div>
+        <div class="map-list" id="nm-list" aria-live="polite"></div>
+      </div>
+      <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Selecting a pin highlights its site in the list. On a phone, List and Map switch between the two views instead of stacking a tall map above the results.</p>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Tideway's own footer, R02) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Site names and published figures are Tideway's; statuses, notices, events and monthly figures are sample data</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+  <script src="../js/tideway.js"></script>
+</body>
+</html>

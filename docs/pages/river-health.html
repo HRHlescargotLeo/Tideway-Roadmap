@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>River health – Tideway prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Tideway's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="Tideway prototypes, overview">tideway <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/home.html" data-proto="home who-does-what"><span class="n">1</span> It's working</a></li>
+          <li><a href="../pages/river-health.html" data-proto="river-health overflow"><span class="n">2</span> River health</a></li>
+          <li><a href="../pages/near-me.html" data-proto="near-me site contact"><span class="n">3</span> Near me</a></li>
+          <li><a href="../pages/riverside.html" data-proto="riverside space"><span class="n">4</span> Visit the riverside</a></li>
+          <li><a href="../pages/documents.html" data-proto="documents"><span class="n">5</span> Find a document</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 2 of 5 · River health</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Turn the Benefits Report into a permanent page that grows each year: the four things the tunnel was built to improve, before and after; a step-through of what happens when it rains; a page for each overflow connection; a short monthly update; and a plain account of how the figures are counted.</p></div>
+          <div><h2>Why</h2><p>The Benefits Report is the best evidence Tideway has, and today it exists as a PDF linked twice from one news story. The homepage counter is updated monthly but nobody can see what happened in a given month, and its only explanation is a 13px footnote. Overflow data is also becoming something the public expects to check for themselves, and Thames Water's live map already shows it for the wider network. A page that holds the results and links to that map puts Tideway's evidence where the conversation is.</p></div>
+        </div>
+        <p class="proposal-foot">Headline figures are from the Benefits Report (12 Oct 2026). Per-overflow and monthly figures are sample data until Tideway shares the real ones.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <span class="eyebrow">River health</span>
+        <h1>How the Thames has changed since the tunnel opened</h1>
+        <p class="lead">The London Tideway Tunnel was built to do four things for the tidal Thames. Here's what the first full year, 2025, shows, and what we're seeing month by month.</p>
+      </div>
+    </div>
+
+    <nav class="inpage-nav" aria-label="On this page">
+      <div class="container"><ul>
+        <li><a href="#results">Results</a></li><li><a href="#rain">When it rains</a></li><li><a href="#overflows">Overflow connections</a></li><li><a href="#monthly">Monthly update</a></li><li><a href="#method">How we count this</a></li><li><a href="#report">The full report</a></li>
+      </ul></div>
+    </nav>
+
+    <div class="container">
+      <!-- Four objectives (R20) -->
+      <section id="results" aria-labelledby="res-title">
+        <h2 class="section-title" id="res-title">The four objectives, before and after</h2>
+        <div class="grid grid-2">
+          <article class="panel" id="discharges">
+            <span class="eyebrow">1 · Sewage discharges</span>
+            <h3 style="margin:.25rem 0 .5rem">About 86% less overflowing into the tidal Thames</h3>
+            <div class="ba"><div class="ba-row"><span>Before</span><i><span style="width:100%"></span></i><em>21m m³</em></div><div class="ba-row after"><span>2025</span><i><span style="width:14%"></span></i><em>&lt;3m m³</em></div></div>
+            <p>Annual storm overflow volume fell to just under three million cubic metres, against an average of more than 21 million before Tideway. 2025 was unusually dry, but the report finds the fall is far larger than rainfall alone would explain.</p>
+          </article>
+          <article class="panel" id="quality">
+            <span class="eyebrow">2 · Water quality</span>
+            <h3 style="margin:.25rem 0 .5rem">Improved water quality in the tidal river</h3>
+            <div class="wf-placeholder" style="min-height:64px">Chart: dissolved oxygen by stretch, before and after [figures from report]</div>
+            <p>The report measures improvement in water quality across the tidal river. Its findings sit alongside ZSL's State of the Thames report, which also found signs of recovery.</p>
+          </article>
+          <article class="panel" id="litter">
+            <span class="eyebrow">3 · Sewage litter</span>
+            <h3 style="margin:.25rem 0 .5rem">84 tonnes of sewage litter kept out of the river</h3>
+            <div class="ba"><div class="ba-row"><span>Before</span><i><span style="width:30%"></span></i><em>30%</em></div><div class="ba-row after"><span>2025</span><i><span style="width:18%"></span></i><em>18%</em></div></div>
+            <p>Wet wipes, sanitary products and plastics. Around 130 tonnes were caught across the wider tunnel system. On the foreshore, Thames21 found sewage-related items fell from 30% of litter recorded to 18%.</p>
+          </article>
+          <article class="panel" id="health">
+            <span class="eyebrow">4 · Health risk for river users</span>
+            <h3 style="margin:.25rem 0 .5rem">Far fewer days with an elevated health risk</h3>
+            <div class="ba"><div class="ba-row"><span>Before</span><i><span style="width:75.7%"></span></i><em>75.7%</em></div><div class="ba-row after"><span>2025</span><i><span style="width:10.4%"></span></i><em>10.4%</em></div></div>
+            <p>Days with an elevated health risk linked to storm overflows fell from an average of 75.7% of days to 10.4% in 2025. That matters to rowers, paddlers and anyone on the foreshore.</p>
+          </article>
+        </div>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Each year's report adds a column. A year switcher appears once there are two years to compare.</p>
+        <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Can Tideway share the report's underlying figures (by stretch and by month) so the charts can be drawn from data rather than images?</p>
+      </section>
+
+      <!-- When it rains (R21) -->
+      <section id="rain" aria-labelledby="rain-title">
+        <h2 class="section-title" id="rain-title">What happens when it rains</h2>
+        <div class="rain" id="rain-app" tabindex="-1">
+          <div class="rain-stage">
+            <div data-rain-step><div class="wf-placeholder">Illustration: rain over London, streets draining into Victorian sewers</div></div>
+            <div data-rain-step hidden><div class="wf-placeholder">Illustration: sewers filling with rainwater and sewage</div></div>
+            <div data-rain-step hidden><div class="wf-placeholder">Illustration: before 2024, an overflow spilling into the Thames</div></div>
+            <div data-rain-step hidden><div class="wf-placeholder">Illustration: overflow diverted down a shaft into the tunnel</div></div>
+            <div data-rain-step hidden><div class="wf-placeholder">Illustration: tunnel to Abbey Mills, Lee Tunnel to Beckton for treatment</div></div>
+          </div>
+          <div class="rain-copy" aria-live="polite">
+            <p class="wf-meta" id="rain-label">Step 1 of 5</p>
+            <div data-rain-step><h3>Rain falls on London</h3><p>London's sewers, built in the 1860s, carry rainwater and sewage in the same pipes.</p></div>
+            <div data-rain-step hidden><h3>The sewers fill up</h3><p>In heavy rain they fill quickly. They were built for a city of about four million people.</p></div>
+            <div data-rain-step hidden><h3>Before the tunnel: overflow into the river</h3><p>To stop sewage backing up into streets and homes, overflows released the excess into the Thames.</p></div>
+            <div data-rain-step hidden><h3>Now: down into the tunnel</h3><p>The overflows are connected to the 25km tunnel, 7.2m across, falling from 31m below Acton to 66m at Abbey Mills. It can hold 1.6 million cubic metres.</p></div>
+            <div data-rain-step hidden><h3>On to Beckton for treatment</h3><p>The Lee Tunnel carries it to Beckton Sewage Treatment Works, where it's cleaned before returning to the river.</p></div>
+            <div class="rain-dots" aria-label="Steps"></div>
+            <div class="row"><button type="button" class="btn btn-secondary btn-sm" data-rain="prev">Previous</button><button type="button" class="btn btn-sm" data-rain="next">Next</button></div>
+          </div>
+        </div>
+        <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Steps advance on click or with the arrow keys. Text sits beside each picture, so the explanation works without the illustrations and for screen readers.</p>
+      </section>
+
+      <!-- Overflow connections (R22) -->
+      <section id="overflows" aria-labelledby="ov-title">
+        <h2 class="section-title" id="ov-title">Overflow connections</h2>
+        <p>Where the tunnel meets London's sewers. Each connection has a page showing what it used to discharge and what the tunnel has caught there.</p>
+        <div class="chip-row" style="margin-top:1rem">
+          <span class="wf-meta">Stretch</span>
+          <button type="button" class="chip" aria-pressed="true" data-stretch="all">All</button>
+          <button type="button" class="chip" aria-pressed="false" data-stretch="west">West</button>
+          <button type="button" class="chip" aria-pressed="false" data-stretch="central">Central</button>
+          <button type="button" class="chip" aria-pressed="false" data-stretch="east">East</button>
+          <label for="overflow-sort" class="wf-meta" style="margin-left:auto">Sort</label>
+          <select id="overflow-sort" style="width:auto"><option value="route">West to east</option><option value="volume">Most captured</option></select>
+        </div>
+        <p class="wf-meta" id="overflow-count" aria-live="polite"></p>
+        <div class="table-wrap"><table class="data-table">
+          <thead><tr><th scope="col">Connection</th><th scope="col">Borough</th><th scope="col" class="num">Storms captured, last 12 months</th><th scope="col" class="num">Volume captured (million m³)</th></tr></thead>
+          <tbody id="overflow-body"></tbody>
+        </table></div>
+        <p class="wf-note query" data-note="4"><span class="wf-note-label">Open question</span>Figures here are sample data. Does Tideway or Thames Water hold capture data by connection, and would Thames Water agree to deep links into its live storm discharge map?</p>
+      </section>
+
+      <!-- Monthly update (R24) -->
+      <section id="monthly" aria-labelledby="mo-title">
+        <h2 class="section-title" id="mo-title">Monthly update</h2>
+        <div class="tabs" id="month-tabs" role="tablist" aria-label="Month"></div>
+        <div id="months" style="margin-top:1rem" aria-live="polite"></div>
+        <div class="panel surface" style="margin-top:1.5rem">
+          <form data-signup="mo-done" novalidate class="lookup">
+            <div class="field"><label for="mo-email">Get the monthly update by email</label><input type="email" id="mo-email" required autocomplete="email"><span class="field-error" hidden>Enter an email address, like name@example.com</span></div>
+            <button class="btn" type="submit">Sign up</button>
+          </form>
+          <p id="mo-done" hidden><strong>You're signed up.</strong> The next update arrives in the first week of November. You can unsubscribe from any email.</p>
+        </div>
+        <p class="wf-note" data-note="5"><span class="wf-note-label">Behaviour</span>Figures are sample data. A short monthly note gives the counter on the homepage some context and a reason to come back.</p>
+      </section>
+
+      <!-- How we count this (R25) -->
+      <section id="method" aria-labelledby="me-title">
+        <h2 class="section-title" id="me-title">How we count this</h2>
+        <div class="accordion">
+          <div class="accordion-item open"><button type="button" class="accordion-title">What the counter measures<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>The total volume of combined sewage and rainwater diverted into the London Tideway Tunnel system instead of spilling into the river. One tonne is about one cubic metre. It's updated once a month.</p></div></div>
+          <div class="accordion-item"><button type="button" class="accordion-title">Where the numbers come from<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>Level and flow monitors at each connection record how much enters the tunnel. [Method to confirm with Tideway.]</p></div></div>
+          <div class="accordion-item"><button type="button" class="accordion-title">What it doesn't include<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>Discharges from overflows that aren't connected to the tunnel, and discharges further upstream on the non-tidal river.</p></div></div>
+          <div class="accordion-item"><button type="button" class="accordion-title">Why some months look different<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>The amount captured follows the rain. A wet month means more captured; a dry month, less. That's why the Benefits Report compares against what rainfall alone would predict.</p></div></div>
+        </div>
+      </section>
+
+      <!-- Report download (R26) -->
+      <section id="report" aria-labelledby="rep-title">
+        <div class="panel surface row between">
+          <div><h2 class="section-title" id="rep-title" style="margin:0 0 .25rem">Thames Tideway Tunnel Benefits Realisation Report 2025</h2><p class="muted" style="margin:0">PDF, 6.2 MB (sample size) · published 12 Oct 2026</p></div>
+          <a class="btn" href="#">Download the report</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Tideway's own footer, R02) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Site names and published figures are Tideway's; statuses, notices, events and monthly figures are sample data</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+  <script src="../js/tideway.js"></script>
+</body>
+</html>

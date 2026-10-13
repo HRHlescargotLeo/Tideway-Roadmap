@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who does what now – Tideway prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 1 of 5 · It's working · Who does what now</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>One page that explains the handover in plain terms: what Tideway still does, what Thames Water now does, and who to contact for each kind of problem, with the right number shown as soon as someone picks their situation.</p></div>
+          <div><h2>Why</h2><p>The Benefits Report story says operation of the tunnel "is transferred to Thames Water from Tideway". About Us says Thames Water will operate it and Tideway will maintain it. Neither tells a resident who smells something near a shaft, or sees a discharge, which number to ring. The helpdesk will otherwise field calls it can no longer act on.</p></div>
+        </div>
+        <p class="proposal-foot">Who handles each situation is our assumption and needs agreeing with Tideway and Thames Water. Numbers shown are Tideway's published helpdesk and the Environment Agency incident hotline; others are marked [to confirm].</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <h1>Who looks after what now</h1>
+        <p class="lead">The tunnel is finished and working. Thames Water now runs it day to day. Tideway still owns it, maintains it and is completing work at a few sites.</p>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top:2rem">
+      <!-- Roles (R15) -->
+      <section aria-labelledby="roles-title">
+        <h2 class="section-title" id="roles-title">The two roles</h2>
+        <div class="grid grid-2">
+          <div class="panel"><span class="owner tw">Tideway</span><h3 style="margin-top:.75rem">Owns and maintains the tunnel</h3><ul class="amenity-list"><li>Finishing works and landscaping at the last sites</li><li>Construction compensation and complaints</li><li>The Benefits Report and river results</li><li>Investors, bondholders and the press</li></ul></div>
+          <div class="panel"><span class="owner">Thames Water</span><h3 style="margin-top:.75rem">Operates the tunnel day to day</h3><ul class="amenity-list"><li>Running the tunnel and its pumping</li><li>Odour from shafts and ventilation</li><li>Live storm overflow status</li><li>Sewers and drains connected to the tunnel</li></ul></div>
+        </div>
+        <p class="wf-note query" data-note="1"><span class="wf-note-label">Open question</span>Is this split right? In particular, who handles odour from Tideway ventilation columns, and who maintains the new public spaces?</p>
+      </section>
+
+      <!-- Chooser (R15) -->
+      <section aria-labelledby="ch-title">
+        <h2 class="section-title" id="ch-title">What do you need help with?</h2>
+        <div class="chooser">
+          <div class="issue-list" id="issue-list"></div>
+          <div class="route-card" id="route-card" aria-live="polite"></div>
+        </div>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Choosing a situation shows who handles it, why, how to reach them and how long a reply takes. Links can be shared with the situation preselected, for example from a site page (?issue=works).</p>
+      </section>
+
+      <!-- Contact list -->
+      <section aria-labelledby="list-title">
+        <h2 class="section-title" id="list-title">All contacts</h2>
+        <div class="table-wrap"><table class="data-table">
+          <thead><tr><th scope="col">Who</th><th scope="col">For</th><th scope="col">How</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Tideway helpdesk</th><td>Works, disruption, compensation, general questions</td><td>08000 30 80 80 (24 hours)<br>helpdesk@tideway.london<br>Freepost TIDEWAY</td></tr>
+            <tr><th scope="row">Thames Water</th><td>Odour, operation of the tunnel, sewers</td><td>[number to confirm]</td></tr>
+            <tr><th scope="row">Environment Agency</th><td>Pollution in the river</td><td>0800 80 70 60 (24 hours)</td></tr>
+            <tr><th scope="row">Tideway press office</th><td>Journalists</td><td>Monday to Friday, 9am to 5pm</td></tr>
+            <tr><th scope="row">Investor relations</th><td>Investors and bondholders</td><td>investor.relations@tideway.london</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/tideway.js"></script>
+</body>
+</html>

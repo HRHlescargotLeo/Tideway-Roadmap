@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overflow connection – Tideway prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 2 of 5 · River health · An overflow connection</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A page for each place the tunnel connects to London's sewers, showing what the tunnel has caught there month by month, and linking to Thames Water's live status for the same overflow.</p></div>
+          <div><h2>Why</h2><p>The Tunnel page steps through 21 overflows on a map but says nothing about any of them beyond the name. People who live by one, or row past it, want to know whether it still spills. Answering that per location is more convincing than any city-wide total.</p></div>
+        </div>
+        <p class="proposal-foot">All figures on this page are sample data. Opens any connection with ?site=, for example ?site=bazalgette-embankment.</p>
+      </div>
+    </aside>
+
+    <div class="page-head" id="overflow-app">
+      <div class="container">
+        <p class="wf-meta"><a href="~/pages/river-health.html#overflows">River health</a> › Overflow connections</p>
+        <h1 data-site-name>Chambers Wharf</h1>
+        <p class="lead">Overflow connection in the <span id="ov-borough">London Borough of Southwark</span>.</p>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top:2rem">
+      <!-- Summary (R23) -->
+      <section aria-labelledby="sum-title">
+        <h2 class="visually-hidden" id="sum-title">Summary</h2>
+        <div class="key-strip">
+          <div><b id="ov-vol">0.6m m³</b><span>Captured in the last 12 months</span></div>
+          <div><b id="ov-storms">6</b><span>Storms captured</span></div>
+          <div><b>0</b><span>Discharges to the river</span></div>
+          <div><b>Connected</b><span>Status</span></div>
+        </div>
+      </section>
+
+      <!-- Monthly chart (R23) -->
+      <section aria-labelledby="chart-title">
+        <h2 class="section-title" id="chart-title">Captured each month, October 2025 to September 2026</h2>
+        <p class="wf-meta">Thousand cubic metres (sample)</p>
+        <div class="mini-chart" id="ov-chart" role="img" aria-label="Bar chart of volume captured each month, sample data"></div>
+        <div class="mini-axis" id="ov-axis" aria-hidden="true"></div>
+      </section>
+
+      <section aria-labelledby="ctx-title">
+        <div class="grid grid-2">
+          <div class="panel">
+            <h2 class="section-title" id="ctx-title">Before the tunnel</h2>
+            <p>[What this overflow used to discharge in a typical year, from the original Environmental Statement.]</p>
+          </div>
+          <div class="panel">
+            <h2 class="section-title">Right now</h2>
+            <p>Thames Water runs the live storm discharge map for every overflow in its network, including this one.</p>
+            <p><a class="btn btn-secondary" href="#">See live status on Thames Water's map</a></p>
+            <p class="wf-note query" data-note="1"><span class="wf-note-label">Open question</span>Can we deep-link to this overflow on Thames Water's map, or show its status here from a feed?</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="more-title">
+        <h2 class="section-title" id="more-title">More about <span data-site-name>Chambers Wharf</span></h2>
+        <div class="row"><a class="btn btn-secondary" id="ov-site-link" href="~/pages/site.html">Site page and updates</a><a class="btn btn-secondary" href="~/pages/river-health.html#overflows">All connections</a></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/tideway.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site page – Tideway prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 3 of 5 · What's happening near me · Site page</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Site pages that open with where things stand: status, when the page was last updated, what's next and who to contact. Below that, dated notices you can filter, a sign-up for updates about this site, the liaison group record as a table and the documents with readable titles.</p></div>
+          <div><h2>Why</h2><p>Chambers Wharf today has no last-updated date, a works update written in 2025, liaison meetings listed in one long sentence (saying the last meeting was on 16 December 2025, then linking notes for the 15th) and seven planning documents named like file names in capitals. Part way down, the page also prints a server error. The content residents need is there; it's the order and the upkeep that let it down.</p></div>
+        </div>
+        <p class="proposal-foot">Shown with Chambers Wharf; opens any site with ?site=. Notices, status and next steps are sample data. Meeting dates are from the live page.</p>
+      </div>
+    </aside>
+
+    <div class="page-head" id="site-app">
+      <div class="container">
+        <p class="wf-meta"><a href="~/pages/near-me.html">What's happening near me</a> › Site</p>
+        <h1 data-site-name>Chambers Wharf</h1>
+        <p class="lead"><span id="st-borough">London Borough of Southwark</span></p>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top:1.5rem">
+      <!-- Status panel (R33) -->
+      <section aria-labelledby="status-title">
+        <h2 class="visually-hidden" id="status-title">Status</h2>
+        <dl class="status-panel">
+          <div><dt>Status</dt><dd id="st-status">Works continuing</dd></div>
+          <div><dt>Last updated</dt><dd id="st-updated">9 Oct 2026</dd></div>
+          <div><dt>What's next</dt><dd id="st-next">Landscaping, then handover</dd></div>
+          <div><dt>Questions</dt><dd>08000 30 80 80, 24 hours</dd></div>
+        </dl>
+        <div class="row" style="margin-top:1rem">
+          <a class="btn" href="#alerts">Get updates about this site</a>
+          <a class="btn btn-secondary" href="~/pages/contact.html" data-site-link>Report a problem here</a>
+          <a class="btn btn-secondary" id="st-overflow" href="~/pages/overflow.html">What the tunnel catches here</a>
+        </div>
+        <p class="panel surface" id="st-space" hidden style="margin-top:1rem">This site is now a public riverside space. <a href="~/pages/riverside.html">Plan a visit</a></p>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>"Last updated" comes from the newest notice, so the page can't look fresher than it is. Editors set status and next steps in the CMS.</p>
+      </section>
+
+      <nav class="inpage-nav" aria-label="On this page">
+        <ul><li><a href="#notices">Notices</a></li><li><a href="#hours">Working hours</a></li><li><a href="#alerts">Updates by email</a></li><li><a href="#clwg">Liaison group</a></li><li><a href="#docs">Documents</a></li></ul>
+      </nav>
+
+      <!-- Notices (R34) -->
+      <section id="notices" aria-labelledby="no-title">
+        <h2 class="section-title" id="no-title">Notices</h2>
+        <div class="chip-row" id="notice-chips" role="group" aria-label="Filter notices"></div>
+        <ul class="notice-list" id="notice-list" aria-live="polite"></ul>
+      </section>
+
+      <section id="hours" aria-labelledby="hr-title">
+        <h2 class="section-title" id="hr-title">Working hours</h2>
+        <div class="table-wrap"><table class="data-table">
+          <thead><tr><th scope="col">Activity</th><th scope="col">Monday to Friday</th><th scope="col">Saturday</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">General works</th><td>8am to 6pm</td><td>–</td></tr>
+            <tr><th scope="row">Concrete breaking</th><td>8am to 6pm</td><td>9am to 2pm</td></tr>
+            <tr><th scope="row">River wall parapet (tidal)</th><td>Up to 10pm</td><td>–</td></tr>
+            <tr><th scope="row">Support activities, e.g. pouring concrete</th><td>Up to 8pm</td><td>–</td></tr>
+          </tbody>
+        </table></div>
+        <p class="wf-meta">As published on the live Chambers Wharf page.</p>
+      </section>
+
+      <!-- Alerts (R35) -->
+      <section id="alerts" aria-labelledby="al-title">
+        <h2 class="section-title" id="al-title">Get updates by email</h2>
+        <div class="panel surface">
+          <form data-alerts-form data-preset="site" data-done="al-done" novalidate class="stack">
+            <fieldset class="field">
+              <legend>Sites</legend>
+              <div class="check-grid">
+                <label class="check"><input type="checkbox" name="sites" value="chambers-wharf" checked data-site-check> <span>Chambers Wharf</span></label>
+                <label class="check"><input type="checkbox" name="sites" value="nearby"> <span>Other sites within 2km</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="field" data-topics>
+              <legend>What about</legend>
+              <div class="check-grid">
+                <label class="check"><input type="checkbox" name="topics" value="works" checked> Works and road changes</label>
+                <label class="check"><input type="checkbox" name="topics" value="hours"> Changes to working hours</label>
+                <label class="check"><input type="checkbox" name="topics" value="events"> Events and openings</label>
+                <label class="check"><input type="checkbox" name="topics" value="clwg"> Liaison group meetings</label>
+              </div>
+              <span class="field-error" hidden>Choose at least one topic</span>
+            </fieldset>
+            <div class="field"><label for="al-email">Email address</label><input type="email" id="al-email" required autocomplete="email"><span class="field-error" hidden>Enter an email address, like name@example.com</span></div>
+            <div><button class="btn" type="submit">Sign up</button></div>
+            <p class="wf-meta">We'll ask you to confirm by email. You can change what you get or unsubscribe from any message.</p>
+          </form>
+          <div id="al-done" hidden class="confirm-box"><div class="tick" aria-hidden="true">✓</div><h3>Check your inbox</h3><p>We've sent a confirmation link to <strong data-email></strong>. Updates start once you've confirmed.</p></div>
+        </div>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Replaces "email communityrelations@tideway-east.london to sign up". Double opt-in; preferences can be changed later from a link in each email.</p>
+      </section>
+
+      <!-- Liaison group (R36) -->
+      <section id="clwg" aria-labelledby="cl-title">
+        <h2 class="section-title" id="cl-title">Community Liaison Working Group</h2>
+        <p>The group meets about twice a year. <strong>Next meeting:</strong> [date to confirm, or a note that the group has closed].</p>
+        <div class="table-wrap"><table class="data-table">
+          <thead><tr><th scope="col">Meeting</th><th scope="col">Notes</th><th scope="col">Slides</th></tr></thead>
+          <tbody id="clwg-body"></tbody>
+        </table></div>
+        <p class="wf-note query" data-note="3"><span class="wf-note-label">Open question</span>Which liaison groups are still meeting now the works are ending, and when will they close?</p>
+      </section>
+
+      <!-- Documents (R37) -->
+      <section id="docs" aria-labelledby="doc-title">
+        <h2 class="section-title" id="doc-title">Documents for this site</h2>
+        <ul class="doc-list" id="site-docs"></ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/tideway.js"></script>
+</body>
+</html>

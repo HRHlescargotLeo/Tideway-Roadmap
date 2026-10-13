@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A riverside space – Tideway prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Tideway's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="Tideway prototypes, overview">tideway <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/home.html" data-proto="home who-does-what"><span class="n">1</span> It's working</a></li>
+          <li><a href="../pages/river-health.html" data-proto="river-health overflow"><span class="n">2</span> River health</a></li>
+          <li><a href="../pages/near-me.html" data-proto="near-me site contact"><span class="n">3</span> Near me</a></li>
+          <li><a href="../pages/riverside.html" data-proto="riverside space"><span class="n">4</span> Visit the riverside</a></li>
+          <li><a href="../pages/documents.html" data-proto="documents"><span class="n">5</span> Find a document</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 4 of 5 · Visit the new riverside · A space</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Once a site becomes a public space, its page should be written for someone planning a visit: what's there, how to get there, step-free access, when the lower parts flood, what's on and the art. The engineering story and the construction record stay, further down, for anyone who wants them.</p></div>
+          <div><h2>Why</h2><p>King Edward Memorial Park Foreshore opened on 29 July 2026, adding about 2,600 square metres to the park. Its page on the live site is still built around construction: works updates, working hours and planning documents. That's the record of how the space came about, but it isn't what a visitor needs first.</p></div>
+        </div>
+        <p class="proposal-foot">Shown with King Edward Memorial Park Foreshore; opens any space with ?space=, for example ?space=chelsea. Facilities, tide times and events are sample data.</p>
+      </div>
+    </aside>
+
+    <div class="container" id="space-app" style="padding-top:1.5rem">
+      <p class="wf-meta"><a href="../pages/riverside.html">Visit the river</a> › The spaces</p>
+      <section class="tw-hero" aria-labelledby="sp-h1" style="padding-top:.5rem">
+        <div class="stack">
+          <h1 id="sp-h1" data-space-name>King Edward Memorial Park Foreshore</h1>
+          <p class="lead" data-kemp-only>A new riverside park in Wapping, built out into the Thames over one of the tunnel's connections. Terraces, planting, seating, public art and a better stretch of the Thames Path.</p>
+          <p class="lead" data-not-kemp hidden>A new public space on the Thames, built over one of the tunnel's connections. [Description to come from Tideway.]</p>
+          <div class="tags" id="sp-features"></div>
+        </div>
+        <div class="carousel" aria-roledescription="carousel" aria-label="Photos">
+          <div class="carousel-track">
+            <div class="carousel-item"><div class="wf-placeholder ratio-4-3">Photo 1: the terraces from the river</div></div>
+            <div class="carousel-item"><div class="wf-placeholder ratio-4-3">Photo 2: planting and seating</div></div>
+            <div class="carousel-item"><div class="wf-placeholder ratio-4-3">Photo 3: the foreshore at high tide</div></div>
+          </div>
+          <div class="carousel-controls"><button type="button" class="carousel-arrow" data-dir="prev" aria-label="Previous photo">‹</button><div class="carousel-indicators"></div><button type="button" class="carousel-arrow" data-dir="next" aria-label="Next photo">›</button></div>
+        </div>
+      </section>
+
+      <!-- Visit (R41) -->
+      <section aria-labelledby="visit-title">
+        <h2 class="section-title" id="visit-title">Plan your visit</h2>
+        <div class="grid grid-3">
+          <div class="panel"><h3>Getting there</h3><dl class="kv"><dt>Nearest station</dt><dd id="sp-station">Shadwell</dd><dt>Borough</dt><dd id="sp-borough">London Borough of Tower Hamlets</dd><dt>Thames Path</dt><dd>Runs through the space</dd></dl><p><a href="#">Directions in your maps app</a></p></div>
+          <div class="panel"><h3>Access</h3><dl class="kv"><dt>Step-free</dt><dd>Yes, from the park (sample)</dd><dt>Toilets</dt><dd>In the park (sample)</dd><dt>Size</dt><dd id="sp-area">2,600 square metres</dd><dt>Status</dt><dd id="sp-opened">Opened 29 July 2026</dd></dl></div>
+          <div class="tide-box" id="sp-tide">
+            <h3>When it floods</h3>
+            <p>The lower terrace is designed to flood at high tide. Keep to the upper levels when the water is up.</p>
+            <p class="wf-meta">High tides today, Tower Pier (sample)</p>
+            <div class="tide-times"><span><b>04:12</b> 6.4m</span><span><b>16:38</b> 6.6m</span></div>
+            <p class="wf-meta">From Port of London Authority tide tables</p>
+          </div>
+        </div>
+        <p class="wf-note query" data-note="1"><span class="wf-note-label">Open question</span>Can we take tide predictions from the Port of London Authority, and who should visitors contact about the space itself?</p>
+      </section>
+
+      <!-- Events here (R42) -->
+      <section aria-labelledby="ev-title">
+        <h2 class="section-title" id="ev-title">What's on here</h2>
+        <ul class="event-list" data-events="param"></ul>
+      </section>
+
+      <!-- Below: the engineering and the record (R41) -->
+      <section aria-labelledby="eng-title">
+        <h2 class="section-title" id="eng-title">What's underneath</h2>
+        <div class="accordion">
+          <div class="accordion-item"><button type="button" class="accordion-title">The engineering<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p data-kemp-only>Below the park, Tideway built a connection that intercepts one of London's most polluting sewer overflows and diverts it into the tunnel, which passes about 60 metres beneath. Building out into the river gave room to do the work without taking more of the park.</p><p><a id="sp-overflow-link" href="../pages/overflow.html">What the tunnel catches here</a></p></div></div>
+          <div class="accordion-item"><button type="button" class="accordion-title">How the space was built<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p><span data-kemp-only>Work began here in 2017. </span><a id="sp-site-link" href="../pages/site.html">The site page</a> keeps the record: notices, liaison group papers and planning documents.</p></div></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="other-title">
+        <h2 class="section-title" id="other-title">Other new spaces</h2>
+        <ul class="hub-links" id="sp-others"></ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Tideway's own footer, R02) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Site names and published figures are Tideway's; statuses, notices, events and monthly figures are sample data</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+  <script src="../js/tideway.js"></script>
+</body>
+</html>

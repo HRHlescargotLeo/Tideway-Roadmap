@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>It's working: homepage – Tideway prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (R03) -->
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 1 of 5 · It's working</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A homepage for the years the tunnel is running rather than the years it was being built. It opens with what the tunnel has done for the river, puts the jobs people come to do within one click, explains plainly who now looks after what, and uses a navigation regrouped around river health, visiting, the tunnel and neighbours.</p></div>
+          <div><h2>Why</h2><p>The first Benefits Report found overflow volumes to the tidal Thames down about 86% in 2025, and every new public space is open. None of that is on the homepage, which leads with a video and a counter whose HTML reads "0 million tonnes" until it animates. The rest of the site still describes construction in the present tense: About Us expects completion in 2025 and Corporate Info in 2024. With operation passing to Thames Water, people will also need telling who to call, and at the moment nothing does.</p></div>
+        </div>
+        <p class="proposal-foot">Figures are from Tideway's Benefits Report (12 Oct 2026) and the live counter. Contact routes marked [to confirm] need agreeing with Tideway and Thames Water.</p>
+      </div>
+    </aside>
+
+    <div class="container" style="padding-top:1.5rem">
+      <!-- Proposed main navigation (R10) -->
+      <nav class="demo-nav" aria-label="Proposed site navigation">
+        <span class="wf-meta">Proposed site navigation · try the menus</span>
+        <ul class="nav-list">
+          <li class="nav-logo"><span class="wf-placeholder logo" style="min-height:32px;width:90px">Tideway logo</span></li>
+          <li class="nav-item"><a class="nav-link" href="#">River health</a>
+            <div class="nav-flyout wide"><div class="flyout-columns">
+              <div class="flyout-column"><h5>Results</h5><ul><li><a href="~/pages/river-health.html">The Benefits Report</a></li><li><a href="~/pages/river-health.html#monthly">Monthly update</a></li></ul></div>
+              <div class="flyout-column"><h5>How it works</h5><ul><li><a href="~/pages/river-health.html#rain">When it rains</a></li><li><a href="~/pages/river-health.html#overflows">Overflow connections</a></li></ul></div>
+              <div class="flyout-column"><h5>Data</h5><ul><li><a href="~/pages/river-health.html#method">How we count this</a></li><li><a href="#">Thames Water live map</a></li></ul></div>
+            </div></div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Visit the river</a>
+            <div class="nav-flyout"><ul><li><a href="~/pages/riverside.html">The new riverside spaces</a></li><li><a href="~/pages/riverside.html#events">What's on</a></li><li><a href="~/pages/riverside.html#trail">Art trail</a></li><li><a href="~/pages/riverside.html#prize">Tideway Prize</a></li></ul></div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">The tunnel</a>
+            <div class="nav-flyout"><ul><li><a href="#">How it was built</a></li><li><a href="#">Timeline</a></li><li><a href="~/pages/documents.html?type=legacy">Learning legacy</a></li></ul></div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Neighbours</a>
+            <div class="nav-flyout"><ul><li><a href="~/pages/near-me.html">What's happening near me</a></li><li><a href="~/pages/contact.html">Report a problem</a></li><li><a href="~/pages/who-does-what.html">Who does what now</a></li><li><a href="~/pages/documents.html">Documents</a></li></ul></div>
+          </li>
+          <li class="nav-item nav-item--right"><a class="nav-link" href="#">About</a>
+            <div class="nav-flyout"><ul><li><a href="#">Who we are</a></li><li><a href="~/pages/documents.html?type=annual">Investors</a></li><li><a href="#">News</a></li><li><a href="#">Careers</a></li></ul></div>
+          </li>
+        </ul>
+      </nav>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Navigation</span>Replaces Open Spaces, Sites, Impact, The Tunnel, News and Contact. "Sites" becomes the near-me lookup under Neighbours; the two duplicate Open Spaces pages become one guide under Visit the river.</p>
+      <div class="flyout-backdrop"></div>
+
+      <!-- Hero with outcome (R11) -->
+      <section class="tw-hero" aria-labelledby="hero-title">
+        <div class="stack">
+          <span class="eyebrow">London's super sewer</span>
+          <h1 id="hero-title">The super sewer is working. Here's what it has done for the Thames.</h1>
+          <p class="lead">In its first full year, the London Tideway Tunnel cut the sewage overflowing into the tidal Thames by about 86%. Operation is now passing to Thames Water; Tideway continues to own and maintain the tunnel.</p>
+          <div class="row"><a class="btn" href="~/pages/river-health.html">See the river results</a><a class="btn btn-secondary" href="~/pages/riverside.html">Visit the new riverside</a></div>
+        </div>
+        <div class="wf-placeholder ratio-4-3">Video 16:9 · people on the new riverside · play button, captions</div>
+      </section>
+
+      <!-- Outcomes from the Benefits Report (R11) -->
+      <section aria-labelledby="out-title">
+        <h2 class="section-title" id="out-title">2025, the first full year</h2>
+        <div class="outcomes">
+          <div class="outcome"><b>86%</b><p>less sewage overflowing into the tidal Thames</p>
+            <div class="ba" aria-hidden="true"><div class="ba-row"><span>Before</span><i><span style="width:100%"></span></i><em>21m m³</em></div><div class="ba-row after"><span>2025</span><i><span style="width:14%"></span></i><em>3m m³</em></div></div>
+            <a href="~/pages/river-health.html#discharges">How we measured this</a></div>
+          <div class="outcome"><b>84 tonnes</b><p>of wet wipes, sanitary products and plastics kept out of the river</p><a href="~/pages/river-health.html#litter">More on litter</a></div>
+          <div class="outcome"><b>10.4%</b><p>of days with an elevated health risk for river users, down from 75.7%</p>
+            <div class="ba" aria-hidden="true"><div class="ba-row"><span>Before</span><i><span style="width:75.7%"></span></i><em>75.7%</em></div><div class="ba-row after"><span>2025</span><i><span style="width:10.4%"></span></i><em>10.4%</em></div></div>
+            <a href="~/pages/river-health.html#health">What this means</a></div>
+          <div class="outcome"><b>30% → 18%</b><p>sewage-related share of foreshore litter, recorded by Thames21</p><a href="~/pages/river-health.html#litter">Thames21's survey</a></div>
+        </div>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Figures sit in the HTML as text so search engines, link previews and screen readers get the real numbers. Each links to the evidence on the River health page (prototype 2).</p>
+      </section>
+
+      <!-- Counter (R12) -->
+      <section aria-labelledby="count-title">
+        <div class="split">
+          <div class="counter">
+            <h2 class="visually-hidden" id="count-title">Sewage diverted so far</h2>
+            <b><span data-count-to="22.2">22.2</span> million tonnes</b>
+            <p>of sewage diverted from the River Thames into the tunnel system since it was connected</p>
+            <p class="wf-meta">Updated monthly · last updated 1 Oct 2026 · <a href="~/pages/river-health.html#method">How we count this</a></p>
+          </div>
+          <div class="stack">
+            <p>One million tonnes is about 400 Olympic swimming pools. Laid end to end, that's 20km of pools for every million tonnes.</p>
+            <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Counts up from zero only when it scrolls into view and the visitor hasn't asked for reduced motion. Otherwise it simply shows 22.2.</p>
+            <p class="wf-note query" data-note="4"><span class="wf-note-label">Open question</span>The footnote today counts from August 2024; The Tunnel page says the network was complete in May 2024; the homepage says fully operational in February 2025. Which dates should the site use?</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Task routes (R13) -->
+      <section aria-labelledby="task-title">
+        <h2 class="section-title" id="task-title">What would you like to do?</h2>
+        <div class="tasks">
+          <a class="task" href="~/pages/river-health.html"><span class="wf-placeholder">Icon</span><span><strong>See how the river is doing</strong><span>Results, monthly updates and data</span></span></a>
+          <a class="task" href="~/pages/riverside.html"><span class="wf-placeholder">Icon</span><span><strong>Visit a new riverside space</strong><span>Seven places along the Thames</span></span></a>
+          <a class="task" href="~/pages/near-me.html"><span class="wf-placeholder">Icon</span><span><strong>Check what's happening near me</strong><span>Sites, works and updates by postcode</span></span></a>
+          <a class="task" href="~/pages/who-does-what.html"><span class="wf-placeholder">Icon</span><span><strong>Report a problem</strong><span>Find out who to contact now</span></span></a>
+          <a class="task" href="~/pages/documents.html"><span class="wf-placeholder">Icon</span><span><strong>Find a document</strong><span>Reports, plans and policies</span></span></a>
+          <a class="task" href="~/pages/documents.html?type=annual"><span class="wf-placeholder">Icon</span><span><strong>Investors</strong><span>Annual reports and contacts</span></span></a>
+        </div>
+      </section>
+
+      <!-- Who does what now (R15) -->
+      <section aria-labelledby="who-title">
+        <h2 class="section-title" id="who-title">Who looks after what now</h2>
+        <p>Thames Water now operates the tunnel. Tideway still owns it, maintains it and finishes the last few sites. Choose what you need help with.</p>
+        <div class="chooser" style="margin-top:1rem">
+          <div class="issue-list" id="issue-list" data-compact></div>
+          <div class="route-card" id="route-card" aria-live="polite"></div>
+        </div>
+        <p style="margin-top:1rem"><a href="~/pages/who-does-what.html">More situations, and the full list of contacts</a></p>
+        <p class="wf-note query" data-note="5"><span class="wf-note-label">Open question</span>Which enquiries move to Thames Water, from when, and does the 24-hour Tideway helpdesk carry on?</p>
+      </section>
+
+      <!-- Milestones (R14) -->
+      <section aria-labelledby="ms-title">
+        <h2 class="section-title" id="ms-title">From building it to running it</h2>
+        <ol class="milestones">
+          <li><time datetime="2024-05">May 2024</time><p>Connected to the Lee Tunnel</p></li>
+          <li><time datetime="2024-08">Aug 2024</time><p>Begins capturing sewage</p></li>
+          <li><time datetime="2025-02">Feb 2025</time><p>Fully operational</p></li>
+          <li><time datetime="2026-07">Jul 2026</time><p>Last new riverside space opens, in Wapping</p></li>
+          <li class="now"><time datetime="2026-10">Oct 2026</time><p>First Benefits Report; operation passes to Thames Water</p></li>
+        </ol>
+        <p class="wf-note query" data-note="6"><span class="wf-note-label">Open question</span>The first three dates come from different pages on the live site. They need checking before this strip goes live.</p>
+      </section>
+
+      <!-- Latest news (R16) -->
+      <section aria-labelledby="news-title">
+        <div class="row between"><h2 class="section-title" id="news-title" style="margin:0">Latest</h2><a href="#">All news</a></div>
+        <div class="news-grid" style="margin-top:1rem">
+          <article class="news-card"><div class="wf-placeholder ratio-16-9">Image 16:9</div><div class="body"><time datetime="2026-10-12">12 Oct 2026</time><h3><a href="#">New report reveals positive impact of super sewer after first year of operation</a></h3></div></article>
+          <article class="news-card"><div class="wf-placeholder ratio-16-9">Image 16:9</div><div class="body"><time datetime="2026-09-27">27 Sep 2026</time><h3><a href="#">Tideway launches new photography prize celebrating a new chapter for the River Thames</a></h3></div></article>
+          <article class="news-card"><div class="wf-placeholder ratio-16-9">Image 16:9</div><div class="body"><time datetime="2026-08-06">6 Aug 2026</time><h3><a href="#">Super sewer company launches ‘Active Tideway’ to help Londoners reconnect with the River Thames</a></h3></div></article>
+        </div>
+      </section>
+
+      <!-- Search snippet (R17) -->
+      <section aria-labelledby="serp-title">
+        <h2 class="section-title" id="serp-title">How the homepage appears in search results</h2>
+        <div class="row" style="margin-bottom:1rem"><button type="button" class="btn btn-secondary btn-sm" aria-pressed="false" data-serp-toggle>Show today’s</button></div>
+        <div class="serp" id="serp-new"><div class="url">www.tideway.london</div><div class="ttl">Tideway | London's super sewer is protecting the Thames</div><p>The London Tideway Tunnel cut sewage overflows to the tidal Thames by about 86% in its first full year. See the results, visit the new riverside and find out who to contact.</p></div>
+        <div class="serp old" id="serp-old" hidden><div class="url">www.tideway.london</div><div class="ttl">Tideway | Reconnecting London with the River Thames</div><p>Tideway is building a 25km Super Sewer under the Thames to intercept those nasty spills and clean up our river for the good of London, its wildlife and you.</p></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/tideway.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a document – Tideway prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 5 of 5 · Find a document</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>One search across pages, news, documents and video, with a summary, type, date and size on every result and filters for type, topic, site and year. Alongside it, annual reports listed newest first, a short investor panel and the learning legacy material grouped by theme.</p></div>
+          <div><h2>Why</h2><p>Searching the live site for "noise" returns 58 results four at a time, across 15 pages, as titles only; one of them is a raw file name. The Document Library is twenty-odd category links with no search, dates or sizes. Its annual reports run 2019-20, then back to 2015-16, then 2020-21 to 2022-23, and stop there, although the 2025-26 report was published in June. For a company whose work is now largely in the record, finding that record should be the easy part.</p></div>
+        </div>
+        <p class="proposal-foot">Titles of news, reports and videos are real. Summaries, file sizes and some dates are sample data.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <h1>Find a document</h1>
+        <p class="lead">Reports, plans, policies, news and video from the whole project, in one place.</p>
+      </div>
+    </div>
+
+    <div class="container" id="docs-app" style="padding-top:1.5rem">
+      <!-- Search (R50) -->
+      <form id="doc-form" class="big-search" role="search">
+        <label for="q" class="visually-hidden">Search</label>
+        <input type="search" id="q" placeholder="Search, for example “noise” or “annual report”" autocomplete="off">
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <p class="wf-meta" style="margin-top:.5rem">Try: <a href="#" data-q="noise">noise</a> · <a href="#" data-q="Chambers Wharf">Chambers Wharf</a> · <a href="#" data-q="benefits">benefits</a> · <a href="#" data-q="compensation">compensation</a></p>
+
+      <div class="search-layout" style="margin-top:1.5rem">
+        <!-- Filters (R51) -->
+        <aside class="facets" id="facets" aria-label="Filters">
+          <fieldset id="f-type" data-legend="Type"></fieldset>
+          <fieldset id="f-topic" data-legend="Topic"></fieldset>
+          <div class="field"><label for="f-site">Site</label><select id="f-site"></select></div>
+          <div class="field"><label for="f-year">Year</label><select id="f-year"></select></div>
+        </aside>
+
+        <!-- Results (R50, R52) -->
+        <section aria-labelledby="results-title">
+          <h2 class="visually-hidden" id="results-title">Results</h2>
+          <div class="results-toolbar row between">
+            <p class="result-count" id="doc-count" aria-live="polite" style="margin:0"></p>
+            <div class="row">
+              <button type="button" class="btn btn-secondary btn-sm mobile-filter-btn" id="facets-toggle" aria-expanded="false" aria-controls="facets">Filters</button>
+              <button type="button" class="btn-link" id="doc-clear" hidden>Clear all</button>
+              <label for="doc-sort" class="wf-meta">Sort</label>
+              <select id="doc-sort" style="width:auto"><option value="relevance">Best match</option><option value="date">Newest first</option></select>
+            </div>
+          </div>
+          <ul class="doc-list" id="doc-results"></ul>
+          <button type="button" class="btn btn-secondary load-more" id="doc-more" hidden>Show more results</button>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Results update as you type. Filter counts show how many results each option would give. Matching words are highlighted in titles and summaries.</p>
+        </section>
+      </div>
+
+      <!-- Annual reports (R53) and investors (R54) -->
+      <section aria-labelledby="inv-title">
+        <h2 class="section-title" id="inv-title">For investors</h2>
+        <div class="investor-strip">
+          <div class="panel"><span class="eyebrow">Latest</span><h3>Annual Report 2025-26</h3><p class="muted">Published 11 Jun 2026 · PDF</p><a class="btn btn-sm" href="#">Download</a></div>
+          <div class="panel"><span class="eyebrow">Announcements</span><h3>RNS and results</h3><p class="muted">[Latest RNS headline and date]</p><a class="btn btn-sm btn-secondary" href="#">All announcements</a></div>
+          <div class="panel"><span class="eyebrow">Contact</span><h3>Investor relations</h3><p>Elina Beale, Treasurer<br>investor.relations@tideway.london</p></div>
+        </div>
+        <h3 style="margin-top:1.5rem">Annual reports</h3>
+        <div class="table-wrap"><table class="data-table">
+          <thead><tr><th scope="col">Year</th><th scope="col">Published</th><th scope="col">File</th></tr></thead>
+          <tbody id="annual-list"></tbody>
+        </table></div>
+        <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Should the investor centre keep its own document list, or point here filtered to Company and investors?</p>
+      </section>
+
+      <!-- Learning legacy (R55) -->
+      <section aria-labelledby="leg-title">
+        <h2 class="section-title" id="leg-title">Learning legacy</h2>
+        <p>What the project learned, for the next one. Case studies and papers grouped by theme.</p>
+        <div class="theme-grid" style="margin-top:1rem">
+          <a class="task" href="#" data-type-only="legacy"><span class="wf-placeholder">Icon</span><span><strong>Moving materials by river</strong><span>Every boat counts</span></span></a>
+          <a class="task" href="#" data-type-only="legacy"><span class="wf-placeholder">Icon</span><span><strong>Carbon</strong><span>Case study</span></span></a>
+          <a class="task" href="#" data-type-only="legacy"><span class="wf-placeholder">Icon</span><span><strong>Social value</strong><span>Jobs, skills and communities</span></span></a>
+          <a class="task" href="#" data-type-only="legacy"><span class="wf-placeholder">Icon</span><span><strong>[Engineering papers]</strong><span>To come from Tideway</span></span></a>
+        </div>
+      </section>
+
+      <!-- Video (R56) -->
+      <section aria-labelledby="vid-title">
+        <div class="row between"><h2 class="section-title" id="vid-title" style="margin:0">Video</h2><a href="#" data-type-only="video">All video</a></div>
+        <div class="news-grid" style="margin-top:1rem">
+          <article class="news-card"><div class="wf-placeholder ratio-16-9">Video · 1:38</div><div class="body"><h3><a href="#">A last visit to the tunnels</a></h3></div></article>
+          <article class="news-card"><div class="wf-placeholder ratio-16-9">Video · 2:22</div><div class="body"><h3><a href="#">Looking East</a></h3></div></article>
+          <article class="news-card"><div class="wf-placeholder ratio-16-9">Video · 4:12</div><div class="body"><h3><a href="#">London's Super Sewer: January 2023, year in review</a></h3></div></article>
+        </div>
+        <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>The 50-odd monthly construction updates become one filterable collection rather than a single column on the Media page.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/tideway.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit the new riverside – Tideway prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 4 of 5 · Visit the new riverside</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A visitor's guide to the seven new riverside spaces, with filters for what people care about (step-free access, the parts that flood at high tide, art, play) and a map; one list of what's on, including Active Tideway sessions with links to book; an art trail along the route; and a home for the Tideway Prize.</p></div>
+          <div><h2>Why</h2><p>Both Open Spaces pages still say "we are creating three acres of new public realm" and show renders, although Tideway announced on 4 August that every new space is open. Active Tideway exists only as a press release with two booking links written into the text, and the Tideway Prize as a news story. These are the reasons most Londoners will have to visit the site now, and at the moment they'd struggle to find any of them.</p></div>
+        </div>
+        <p class="proposal-foot">Space names and boroughs are from tideway.london. Features, stations marked [to confirm], event dates and sessions are sample data. Active Tideway's partners, Active360 and London Sports Trust, are real.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <span class="eyebrow">Visit the river</span>
+        <h1>Seven new places by the Thames</h1>
+        <p class="lead">Building the super sewer meant building out into the river. Those sites are now public spaces, with seating, planting and art. In three of them, parts of the space are designed to flood at high tide.</p>
+      </div>
+    </div>
+
+    <div class="container" id="riverside-app" style="padding-top:1.5rem">
+      <nav class="inpage-nav" aria-label="On this page">
+        <ul><li><a href="#spaces">The spaces</a></li><li><a href="#events">What's on</a></li><li><a href="#trail">Art trail</a></li><li><a href="#prize">Tideway Prize</a></li></ul>
+      </nav>
+
+      <!-- Spaces guide (R40) -->
+      <section id="spaces" aria-labelledby="sp-title">
+        <h2 class="section-title" id="sp-title">The spaces</h2>
+        <div class="chip-row" role="group" aria-label="Filter spaces">
+          <span class="wf-meta">Show spaces with</span>
+          <button type="button" class="chip" aria-pressed="false" data-feature="stepfree">Step-free access</button>
+          <button type="button" class="chip" aria-pressed="false" data-feature="floodable">Floods at high tide</button>
+          <button type="button" class="chip" aria-pressed="false" data-feature="art">Public art</button>
+          <button type="button" class="chip" aria-pressed="false" data-feature="play">Play</button>
+          <button type="button" class="chip" aria-pressed="false" data-feature="water">On-water activities</button>
+        </div>
+        <p class="wf-meta" id="rs-count" aria-live="polite"></p>
+        <div class="map-canvas" id="rs-map" style="min-height:260px;margin:.75rem 0 1.5rem">
+          <div class="wf-placeholder">Map of the seven spaces along the Thames</div>
+          <svg class="river-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="" vector-effect="non-scaling-stroke"/></svg>
+        </div>
+        <div class="space-grid" id="space-grid" aria-live="polite"></div>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Filters combine: choosing "Step-free" and "Public art" shows only spaces with both. Map pins follow the filters.</p>
+        <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Who looks after each space day to day, and should their contact details appear on its page?</p>
+      </section>
+
+      <!-- Events (R42) -->
+      <section id="events" aria-labelledby="ev-title">
+        <h2 class="section-title" id="ev-title">What's on</h2>
+        <div class="grid grid-2" style="margin-bottom:1rem">
+          <div class="panel surface"><h3>Active Tideway</h3><p>Subsidised sessions on and beside the river, from paddleboarding to natural history walks and litter picks, run with Active360 and London Sports Trust.</p></div>
+          <div class="panel surface"><h3>Something for a group?</h3><p>Schools, community groups and professional bodies can ask about talks and site visits. <a href="~/pages/contact.html?topic=space">Get in touch</a></p></div>
+        </div>
+        <div class="chip-row" id="ev-chips" role="group" aria-label="Filter events">
+          <span class="wf-meta">Show</span>
+          <button type="button" class="chip" aria-pressed="true" data-etype="all">Everything</button>
+          <button type="button" class="chip" aria-pressed="false" data-etype="active">Active Tideway</button>
+          <button type="button" class="chip" aria-pressed="false" data-etype="walk">Walks and tours</button>
+          <button type="button" class="chip" aria-pressed="false" data-etype="art">Art</button>
+          <button type="button" class="chip" aria-pressed="false" data-etype="talk">Talks</button>
+          <label for="ev-where" class="visually-hidden">Space</label>
+          <select id="ev-where" style="width:auto;margin-left:auto"></select>
+        </div>
+        <ul class="event-list" data-events="all" data-chips="ev-chips" aria-live="polite"></ul>
+        <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Booking stays with the partners: each button opens Active360's or London Sports Trust's own booking page. Tideway events register here.</p>
+      </section>
+
+      <!-- Art trail (R43) -->
+      <section id="trail" aria-labelledby="tr-title">
+        <h2 class="section-title" id="tr-title">Art on the Tideway: a trail</h2>
+        <div class="split">
+          <ol class="trail">
+            <li><div><h3>Bronze plaques, designed with Pentagram</h3><p>A series of plaques giving twelve sites a shared identity. Start at any of them.</p></div></li>
+            <li><div><h3>Poetry by Dorothea Smartt</h3><p>Lines set into the ventilation columns at many of the sites. [Which sites to confirm.]</p></div></li>
+            <li><div><h3>Leo Fitzmaurice at Chambers Wharf</h3><p>An artwork in bronze and steel for the new riverside space in Bermondsey.</p></div></li>
+            <li><div><h3>[Further works to confirm]</h3><p>Each stop has a page with the piece, the artist, a photo and directions to the next.</p></div></li>
+          </ol>
+          <div class="wf-placeholder ratio-4-3">Trail map, west to east</div>
+        </div>
+        <p class="wf-note query" data-note="4"><span class="wf-note-label">Open question</span>Which works are installed and where? We have three named from the Chambers Wharf page; Art on the Tideway will have the full list.</p>
+      </section>
+
+      <!-- Prize (R44) -->
+      <section id="prize" aria-labelledby="pz-title">
+        <h2 class="section-title" id="pz-title">The Tideway Prize</h2>
+        <div class="split">
+          <div class="stack">
+            <p>A photography prize for pictures of the river in its new chapter. Launched on 27 September 2026.</p>
+            <dl class="kv"><dt>Closing date</dt><dd>[to confirm]</dd><dt>Who can enter</dt><dd>[to confirm]</dd><dt>Judges</dt><dd>[to confirm]</dd></dl>
+            <div class="row"><a class="btn" href="#">How to enter</a></div>
+          </div>
+          <div class="grid grid-3"><div class="wf-placeholder ratio-1-1">Shortlisted photo</div><div class="wf-placeholder ratio-1-1">Shortlisted photo</div><div class="wf-placeholder ratio-1-1">Shortlisted photo</div></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/tideway.js"></script>
+</body>
+</html>
