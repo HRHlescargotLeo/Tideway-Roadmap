@@ -443,8 +443,9 @@
     spaces.forEach(function (sp) {
       var s = siteById(sp.site), p = pos(s.lat, s.lng);
       var a = document.createElement('a');
-      a.className = 'map-pin'; a.href = 'space.html?space=' + sp.id; a.textContent = sp.name.split(' ')[0];
+      a.className = 'map-pin'; a.href = 'space.html?space=' + sp.id; a.textContent = sp.name.replace(' & Isle of Effra', '').replace(' Pumping Station', '').replace(' Embankment Foreshore', '').replace('King Edward Memorial Park Foreshore', 'King Edward Memorial Park');
       a.style.left = p.x + '%'; a.style.top = p.y + '%'; a.setAttribute('data-space-pin', sp.id);
+      if (['tyburn', 'effra', 'chelsea'].indexOf(sp.id) !== -1) a.classList.add('below');
       canvas.appendChild(a);
     });
     function render() {
