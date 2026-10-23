@@ -267,27 +267,60 @@
 
   /* --- Prototype navigator: current page and previous / next ------------- */
   function initProtoNav() {
-    var file = (window.location.pathname.split('/').pop() || 'index.html').replace('.html', '') || 'index';
-    var links = Array.prototype.slice.call(document.querySelectorAll('.proto-links a[data-proto]'));
+    var file = currentFile().replace('.html', '') || 'index';
+    /* Two tabs (R09): the five concepts and the quick wins. The pager stays
+       inside the current tab. */
+    var tab = (file === 'quick-wins' || /^qw-/.test(file)) ? 'qw' : 'big';
+    $all('[data-tab-link]').forEach(function (a) {
+      if (a.getAttribute('data-tab-link') === tab) a.setAttribute('aria-current', 'true');
+    });
+    $all('nav[data-set]').forEach(function (n) { n.hidden = n.getAttribute('data-set') !== tab; });
+    var set = $('nav[data-set="' + tab + '"]');
+    if (!set) return;
+    var links;
+    if (tab === 'qw') {
+      links = [$('.proto-links a[data-proto]', set)].concat($all('.qw-seq a', set));
+      var jump = $('[data-qw-jump]', set);
+      if (jump) {
+        var html = '<option value="">Choose…</option>';
+        $all('.qw-seq a', set).forEach(function (a) {
+          var on = a.getAttribute('data-proto') === file;
+          if (on) a.setAttribute('aria-current', 'page');
+          html += '<option value="' + a.getAttribute('href') + '"' + (on ? ' selected' : '') + '>' + esc(a.textContent.replace(/\s+/g, ' ').trim()) + '</option>';
+        });
+        jump.innerHTML = html;
+        jump.addEventListener('change', function () { if (jump.value) window.location.href = jump.value; });
+      }
+      var ov = $('.proto-links a[data-proto]', set);
+      if (file === 'quick-wins') ov.setAttribute('aria-current', 'page');
+      var index = -1;
+      links.forEach(function (a, i) { if (a.getAttribute('data-proto') === file) index = i; });
+      return buildPager(links, index);
+    }
+    links = $all('.proto-links a[data-proto]', set);
     var index = -1;
     links.forEach(function (a, i) {
-      var match = a.getAttribute('data-proto').split(' ').indexOf(file) !== -1;
-      if (match) { a.setAttribute('aria-current', 'page'); index = i; }
+      if (a.getAttribute('data-proto').split(' ').indexOf(file) !== -1) { a.setAttribute('aria-current', 'page'); index = i; }
     });
-    var current = document.querySelector('.proto-links a[aria-current]');
-    if (current && current.scrollIntoView && window.innerWidth < 1024) {
+    var current = $('.proto-links a[aria-current]');
+    if (current && window.innerWidth < 1180) {
       var list = current.closest('.proto-links');
       if (list) list.scrollLeft = current.offsetLeft - 16;
     }
-    var pager = document.querySelector('[data-proto-pager]');
+    buildPager(links, index);
+  }
+
+  function buildPager(links, index) {
+    var pager = $('[data-proto-pager]');
     if (!pager || index < 0) return;
     function label(a) { return a.textContent.replace(/\s+/g, ' ').trim(); }
     var html = '';
-    if (index > 0) html += '<a class="prev" href="' + links[index - 1].getAttribute('href') + '"><span class="wf-meta">Previous</span>' + label(links[index - 1]) + '</a>';
-    else html += '<span></span>';
-    if (index < links.length - 1) html += '<a class="next" href="' + links[index + 1].getAttribute('href') + '"><span class="wf-meta">Next</span>' + label(links[index + 1]) + '</a>';
+    if (index > 0) html += '<a class="prev" href="' + links[index - 1].getAttribute('href') + '"><span class="wf-meta">Previous</span>' + esc(label(links[index - 1])) + '</a>';
+    if (index < links.length - 1) html += '<a class="next" href="' + links[index + 1].getAttribute('href') + '"><span class="wf-meta">Next</span>' + esc(label(links[index + 1])) + '</a>';
     pager.innerHTML = html;
   }
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
 
   function $(sel, root) { return (root || document).querySelector(sel); }

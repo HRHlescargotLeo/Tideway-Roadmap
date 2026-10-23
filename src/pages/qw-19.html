@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QW19 A proofreading pass – Tideway quick win</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body class="qw-page">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 19 of 20 · A proofreading pass</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Correct the errors we found, write link text that says where it goes, separate tags, and write dates as 12 Oct 2026. Then run one spelling and style check across the site.</p></div>
+          <div><h2>Why</h2><p>The Tunnel says “protecting the river and it's wildlife”. The homepage says “Click here for our full statement.” News cards run tags together (“EnvironmentPlacePeopleLegacyWestCentralEast”) and use dates like 12/10/26.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW19, idea I44 -->
+    <div class="page-head qw-head">
+      <div class="container"><span class="eyebrow">Quick win 19</span><h1>A proofreading pass</h1><p class="lead">Typos, “click here” links, run-together tags and numeric dates.</p></div>
+    </div>
+    <div class="container qw-body">
+      <p class="qw-try"><strong>Try:</strong> Press “Show what’s changed”.</p>
+      <div data-qw="diff"><button type="button" class="btn btn-secondary btn-sm" data-diff aria-pressed="false">Show what's changed</button><div class="qw-compare"><section class="qw-pane qw-today" aria-label="Today"><p class="qw-label">Today</p><ul class="qw-list"><li>protecting the river and <mark>it's</mark> wildlife</li><li><mark>Click here</mark> for our full statement.</li><li><mark>EnvironmentPlacePeopleLegacyWestCentralEast</mark></li><li><mark>12/10/26</mark></li></ul></section><section class="qw-pane qw-proposed" aria-label="Proposed"><p class="qw-label">Proposed</p><ul class="qw-list"><li>protecting the river and <mark>its</mark> wildlife</li><li><mark>Read our modern slavery statement 2025 (PDF)</mark></li><li><mark><span class="tag">Environment</span> <span class="tag">Place</span> <span class="tag">People</span></mark></li><li><mark>12 Oct 2026</mark></li></ul></section></div></div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>These are the ones we noticed. A full pass would cover every page.</p>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/quickwins.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QW5 The real number in the counter – Tideway quick win</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body class="qw-page">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 5 of 20 · The real number in the counter</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Print the current figure in the page HTML and count up only when the counter scrolls into view and the visitor hasn't asked for reduced motion.</p></div>
+          <div><h2>Why</h2><p>The counter's HTML reads “0 million tonnes” until a script animates it to 22.2 when it scrolls into view. Link previews, search engines and some screen readers can be left with the zero.</p></div>
+        </div>
+        <p class="proposal-foot">Also part of big improvement 1. It can be made on its own, without the rest of that improvement.</p>
+      </div>
+    </aside>
+
+    <!-- QW5, idea I06 -->
+    <div class="page-head qw-head">
+      <div class="container"><span class="eyebrow">Quick win 5</span><h1>The real number in the counter</h1><p class="lead">22.2 million tonnes in the page itself, animated only when motion is welcome.</p></div>
+    </div>
+    <div class="container qw-body">
+      <p class="qw-try"><strong>Try:</strong> Press “What a search engine reads” on each side, then replay the animation.</p>
+      <div class="qw-compare"><section class="qw-pane qw-today" aria-label="Today"><p class="qw-label">Today</p><div data-qw="counter" data-mode="today"><div class="counter"><b><span data-num>0</span> million tonnes</b><p>of sewage diverted from the River Thames*</p></div>
+       <div class="row"><button type="button" class="btn btn-secondary btn-sm" data-replay>Scroll it into view</button><button type="button" class="btn btn-secondary btn-sm" data-read>What a search engine reads</button></div><p class="qw-read" data-out aria-live="polite"></p></div></section><section class="qw-pane qw-proposed" aria-label="Proposed"><p class="qw-label">Proposed</p><div data-qw="counter" data-mode="proposed"><div class="counter"><b><span data-num>22.2</span> million tonnes</b><p>of sewage diverted from the River Thames since it was connected</p></div>
+       <div class="row"><button type="button" class="btn btn-secondary btn-sm" data-replay>Replay the count</button><button type="button" class="btn btn-secondary btn-sm" data-read>What a search engine reads</button><label class="check"><input type="checkbox" data-reduce> Reduce motion</label></div><p class="qw-read" data-out aria-live="polite"></p></div></section></div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>With reduced motion on, the number simply appears. The figure comes from the same monthly update as today.</p>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/quickwins.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QW4 One completion date, told the same way everywhere – Tideway quick win</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body class="qw-page">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 4 of 20 · One completion date, told the same way everywhere</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Agree one sequence of milestones (connected, capturing, fully operational, last riverside space opens, handover) and show it as the same strip on every page that talks about completion.</p></div>
+          <div><h2>Why</h2><p>Three pages give three answers. The homepage counter footnote says the tunnel was “fully connected and operational in February, 2025” and counts from August 2024. The Tunnel page says the network was completed in May 2024, and also that “the system commissioning phase has now started”.</p></div>
+        </div>
+        <p class="proposal-foot">Also part of big improvement 1. It can be made on its own, without the rest of that improvement.</p>
+      </div>
+    </aside>
+
+    <!-- QW4, idea I07 -->
+    <div class="page-head qw-head">
+      <div class="container"><span class="eyebrow">Quick win 4</span><h1>One completion date, told the same way everywhere</h1><p class="lead">The same milestones on the homepage, The Tunnel and the Timeline.</p></div>
+    </div>
+    <div class="container qw-body">
+      <p class="qw-try"><strong>Try:</strong> Switch the page in the proposed version and check the milestones stay the same.</p>
+      <div class="qw-compare stack"><section class="qw-pane qw-today" aria-label="Today"><p class="qw-label">Today</p><ul class="qw-quotes"><li><span class="badge">Homepage</span><q>The tunnel was fully connected and operational in February, 2025.</q></li>
+       <li><span class="badge">Homepage counter</span><q>into the London Tideway Tunnel system since August 2024.</q></li>
+       <li><span class="badge">The Tunnel</span><q>In May 2024, the new super sewer was connected to the Lee Tunnel … completing the full ‘London Tideway Tunnel’ network.</q></li>
+       <li><span class="badge">The Tunnel</span><q>the system commissioning phase has now started.</q></li></ul></section><section class="qw-pane qw-proposed" aria-label="Proposed"><p class="qw-label">Proposed</p><div data-qw="dates"><div class="field"><label for="qw-page">Shown on</label><select id="qw-page"><option>Homepage</option><option>The Tunnel</option><option>Timeline</option></select></div>
+       <ol class="milestones"><li><time>May 2024</time><p>Connected to the Lee Tunnel</p></li><li><time>Aug 2024</time><p>Begins capturing sewage</p></li><li><time>Feb 2025</time><p>Fully operational</p></li><li><time>Jul 2026</time><p>Last new riverside space opens</p></li><li class="now"><time>Oct 2026</time><p>Operation passes to Thames Water</p></li></ol>
+       <p class="small muted" data-page-note></p></div></section></div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>The strip is one shared content block, so changing a date changes it everywhere.</p>
+      <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Which dates are right? The first three come from different pages on the live site and need checking.</p>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/quickwins.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QW10 A page for the Tideway Prize – Tideway quick win</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body class="qw-page">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 10 of 20 · A page for the Tideway Prize</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A prize page with how to enter, the dates and the judges, then a gallery that fills with the shortlist and winners as the prize runs.</p></div>
+          <div><h2>Why</h2><p>The Tideway Prize photography competition was announced on 27 September 2026 as a news story. There is nowhere for entrants to come back to.</p></div>
+        </div>
+        <p class="proposal-foot">Also part of big improvement 4. It can be made on its own, without the rest of that improvement.</p>
+      </div>
+    </aside>
+
+    <!-- QW10, idea I25 -->
+    <div class="page-head qw-head">
+      <div class="container"><span class="eyebrow">Quick win 10</span><h1>A page for the Tideway Prize</h1><p class="lead">How to enter, the key dates and a gallery, instead of a single news story.</p></div>
+    </div>
+    <div class="container qw-body">
+      <p class="qw-try"><strong>Try:</strong> Switch the gallery between “Shortlist” and “Winners”.</p>
+      <div class="qw-compare"><section class="qw-pane qw-today" aria-label="Today"><p class="qw-label">Today</p><div class="news-card qw-one"><div class="wf-placeholder ratio-16-9">Tideway Prize artwork</div><div class="body"><time>27/09/26</time><h3>Tideway launches new photography prize celebrating a new chapter for the River Thames</h3></div></div></section><section class="qw-pane qw-proposed" aria-label="Proposed"><p class="qw-label">Proposed</p><div data-qw="prize"><h3>The Tideway Prize</h3><dl class="kv"><dt>Closing date</dt><dd>[to confirm]</dd><dt>Who can enter</dt><dd>[to confirm]</dd><dt>Judges</dt><dd>[to confirm]</dd></dl><p><a class="btn btn-sm" href="#">How to enter</a></p>
+       <div class="seg" role="group" aria-label="Gallery"><button type="button" aria-pressed="true" data-set="short">Shortlist</button><button type="button" aria-pressed="false" data-set="win">Winners</button></div>
+       <div class="qw-gallery" data-gallery="short"><div class="wf-placeholder ratio-1-1">Shortlisted photo</div><div class="wf-placeholder ratio-1-1">Shortlisted photo</div><div class="wf-placeholder ratio-1-1">Shortlisted photo</div></div>
+       <div class="qw-gallery" data-gallery="win" hidden><p class="qw-empty">Winners are announced at the end of the prize. [Date to confirm]</p></div></div></section></div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Galleries are filled by editors as the prize runs. The news story links to this page.</p>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/quickwins.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

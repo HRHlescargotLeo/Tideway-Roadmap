@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QW7 Fix the server error on Chambers Wharf – Tideway quick win</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body class="qw-page">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 7 of 20 · Fix the server error on Chambers Wharf</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Fix the missing partial view, check every site page for the same fault, and set the site so exceptions are logged rather than printed on public pages.</p></div>
+          <div><h2>Why</h2><p>Part way down the Chambers Wharf page, between the accordions and the list of partners, the page prints “Block Exception:System.InvalidOperationException: The partial view 'blocksFolder' was not found…” followed by the server's file paths.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW7, idea I37 -->
+    <div class="page-head qw-head">
+      <div class="container"><span class="eyebrow">Quick win 7</span><h1>Fix the server error on Chambers Wharf</h1><p class="lead">The site page prints a .NET exception where its content should be.</p></div>
+    </div>
+    <div class="container qw-body">
+      <p class="qw-try"><strong>Try:</strong> Compare the middle of the two Chambers Wharf pages.</p>
+      <div class="qw-compare"><section class="qw-pane qw-today" aria-label="Today"><p class="qw-label">Today</p><div class="qw-site"><h3>Chambers Wharf</h3><p class="small">Works update · Our working hours · Community Liaison Working Group · Our commitments</p>
+       <pre class="qw-exception">Block Exception:System.InvalidOperationException: The partial view 'blocksFolder' was not found or no view engine supports the searched locations. The following locations were searched: ~/Views/BTSitePage/blocksFolder.aspx ~/Views/BTSitePage/blocksFolder.ascx ~/Views/Shared/blocksFolder.aspx … at System.Web.Mvc.HtmlHelper.FindPartialView(…)</pre>
+       <p class="small">Thames River Watch · Active Row · Thames Discovery Programme</p></div></section><section class="qw-pane qw-proposed" aria-label="Proposed"><p class="qw-label">Proposed</p><div class="qw-site"><h3>Chambers Wharf</h3><p class="small">Works update · Our working hours · Community Liaison Working Group · Our commitments</p>
+       <div class="panel surface"><h4>Our partners on the river</h4><p class="small">Thames River Watch · Active Row · Thames Discovery Programme · Creekside Discovery Centre · Active Thames</p></div></div></section></div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>We'd check all 24 site pages and the main templates for the same error as part of the fix.</p>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/quickwins.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>
