@@ -1,0 +1,182 @@
+[
+ {
+  "qw": 1,
+  "idea": 2,
+  "concept": 1,
+  "theme": "Saying what's true now",
+  "title": "Who does what now",
+  "line": "One page that says which enquiries now go to Thames Water and which stay with Tideway.",
+  "file": "qw-01"
+ },
+ {
+  "qw": 2,
+  "idea": 4,
+  "concept": 1,
+  "theme": "Saying what's true now",
+  "title": "Task links on the homepage",
+  "line": "Six links under the homepage hero for the jobs people come to do.",
+  "file": "qw-02"
+ },
+ {
+  "qw": 3,
+  "idea": 5,
+  "concept": 1,
+  "theme": "Saying what's true now",
+  "title": "Search snippets that describe today",
+  "line": "Titles, descriptions and share images written for a tunnel that's working.",
+  "file": "qw-03"
+ },
+ {
+  "qw": 4,
+  "idea": 7,
+  "concept": 1,
+  "theme": "Saying what's true now",
+  "title": "One completion date, told the same way everywhere",
+  "line": "The same milestones on the homepage, The Tunnel and the Timeline.",
+  "file": "qw-04"
+ },
+ {
+  "qw": 5,
+  "idea": 6,
+  "concept": 1,
+  "theme": "The numbers",
+  "title": "The real number in the counter",
+  "line": "22.2 million tonnes in the page itself, animated only when motion is welcome.",
+  "file": "qw-05"
+ },
+ {
+  "qw": 6,
+  "idea": 12,
+  "concept": 2,
+  "theme": "The numbers",
+  "title": "How we count this, in plain English",
+  "line": "A short explanation beside the counter, instead of a 13px footnote.",
+  "file": "qw-06"
+ },
+ {
+  "qw": 7,
+  "idea": 37,
+  "concept": null,
+  "theme": "Neighbours and site pages",
+  "title": "Fix the server error on Chambers Wharf",
+  "line": "The site page prints a .NET exception where its content should be.",
+  "file": "qw-07"
+ },
+ {
+  "qw": 8,
+  "idea": 17,
+  "concept": 3,
+  "theme": "Neighbours and site pages",
+  "title": "A liaison group record you can scan",
+  "line": "Meetings as a table, newest first, with the next date or a note that the group has closed.",
+  "file": "qw-08"
+ },
+ {
+  "qw": 9,
+  "idea": 29,
+  "concept": 3,
+  "theme": "Neighbours and site pages",
+  "title": "Readable document names",
+  "line": "Plain titles with type, size and date, instead of file names in capitals.",
+  "file": "qw-09"
+ },
+ {
+  "qw": 10,
+  "idea": 25,
+  "concept": 4,
+  "theme": "Neighbours and site pages",
+  "title": "A page for the Tideway Prize",
+  "line": "How to enter, the key dates and a gallery, instead of a single news story.",
+  "file": "qw-10"
+ },
+ {
+  "qw": 11,
+  "idea": 28,
+  "concept": 5,
+  "theme": "Company facts and records",
+  "title": "Annual reports in order and up to date",
+  "line": "Every year, newest first, including 2023-24 to 2025-26.",
+  "file": "qw-11"
+ },
+ {
+  "qw": 12,
+  "idea": 32,
+  "concept": null,
+  "theme": "Company facts and records",
+  "title": "Bring About Us up to date",
+  "line": "Present-tense copy and one set of checked figures.",
+  "file": "qw-12"
+ },
+ {
+  "qw": 13,
+  "idea": 33,
+  "concept": null,
+  "theme": "Company facts and records",
+  "title": "Corporate Info that agrees with About Us",
+  "line": "One company summary used on both pages.",
+  "file": "qw-13"
+ },
+ {
+  "qw": 14,
+  "idea": 35,
+  "concept": null,
+  "theme": "Company facts and records",
+  "title": "No more expired vacancies",
+  "line": "Closed roles come down by themselves, with a job alert in their place.",
+  "file": "qw-14"
+ },
+ {
+  "qw": 15,
+  "idea": 38,
+  "concept": null,
+  "theme": "Accessibility and housekeeping",
+  "title": "A main heading on every page",
+  "line": "One H1 per page, so screen readers and search engines know what the page is.",
+  "file": "qw-15"
+ },
+ {
+  "qw": 16,
+  "idea": 40,
+  "concept": null,
+  "theme": "Accessibility and housekeeping",
+  "title": "A cookie banner with “Reject all”",
+  "line": "Rejecting non-essential cookies as easy as accepting them.",
+  "file": "qw-16"
+ },
+ {
+  "qw": 17,
+  "idea": 41,
+  "concept": null,
+  "theme": "Accessibility and housekeeping",
+  "title": "Teal text that passes contrast",
+  "line": "A deeper teal for small text and links; the brand teal stays for headings and fills.",
+  "file": "qw-17"
+ },
+ {
+  "qw": 18,
+  "idea": 42,
+  "concept": null,
+  "theme": "Accessibility and housekeeping",
+  "title": "Share links that work",
+  "line": "https addresses, and no old agency account in the X share.",
+  "file": "qw-18"
+ },
+ {
+  "qw": 19,
+  "idea": 44,
+  "concept": null,
+  "theme": "Accessibility and housekeeping",
+  "title": "A proofreading pass",
+  "line": "Typos, “click here” links, run-together tags and numeric dates.",
+  "file": "qw-19"
+ },
+ {
+  "qw": 20,
+  "idea": 45,
+  "concept": null,
+  "theme": "Accessibility and housekeeping",
+  "title": "Clear the broken requests",
+  "line": "No more requests for missing files, and a monthly check that catches new ones.",
+  "file": "qw-20"
+ }
+]

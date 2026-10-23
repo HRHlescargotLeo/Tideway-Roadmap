@@ -167,7 +167,7 @@ body.wf-notes-hidden .wf-note { display: none; }
 .wf-req { font-size: 0.75rem; color: var(--wf-text-muted); font-variant-numeric: tabular-nums; }
 
 /* ==========================================================================
-   Get Living prototype modules (V1)
+   Prototype modules
    Greyscale structural styles only. Anything visual belongs in theme.css.
    ========================================================================== */
 
@@ -483,8 +483,8 @@ body.hub section { margin: 3rem 0; }
 .hub-footer { margin-top: 2rem; padding: 1.5rem 0; font-size: 0.875rem; color: var(--wf-text-muted); }
 
 /* ==========================================================================
-   V1.2 — prototype navigator, notes switch and proposal panel
-   Replaces Get Living's own header and footer so the pack reads as a set of
+   Prototype navigator, notes switch and proposal panel
+   Replaces the client's own header and footer so the pack reads as a set of
    prototypes, not a copy of the site.
    ========================================================================== */
 .proto-nav { background: var(--wf-page); border-bottom: 1px solid var(--wf-border-strong); }
@@ -716,3 +716,139 @@ body.hub .hub-hero { border-top: 0; }
 .investor-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 @media (max-width: 900px) { .investor-strip { grid-template-columns: minmax(0, 1fr); } }
 .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+
+/* ==========================================================================
+   Two tabs and the Quick wins tab
+   ========================================================================== */
+.proto-tabs { background: var(--wf-surface); border-bottom: 1px solid var(--wf-border); }
+.proto-tabs nav { display: flex; gap: 0.25rem; }
+.proto-tabs a { padding: 0.45rem 0.75rem; font-size: 0.8125rem; font-weight: 600; color: var(--wf-text-muted); border-bottom: 2px solid transparent; white-space: nowrap; }
+.proto-tabs a:hover { color: var(--wf-text); text-decoration: none; }
+.proto-tabs a[aria-current="true"] { color: var(--wf-text); border-bottom-color: var(--wf-text); }
+nav[data-set][hidden] { display: none; }
+.qw-jump-li { align-items: center; }
+.qw-jump { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0 0.5rem; font-size: 0.875rem; white-space: nowrap; }
+.qw-jump select { width: auto; max-width: 300px; min-width: 0; padding: 0.4rem 0.5rem; }
+
+/* --- Quick wins overview -------------------------------------------------- */
+.qw-theme { margin-top: 2.5rem; }
+.qw-cards { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.qw-card { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; padding: 1.25rem; border: 1px solid var(--wf-border); border-radius: var(--wf-radius); background: var(--wf-page); }
+.qw-card h3 { font-size: 1.0625rem; margin: 0; }
+.qw-card h3 a { color: var(--wf-text); }
+.qw-card p { margin: 0; }
+.qw-card .btn { margin-top: auto; }
+.qw-num { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; padding: 0.15rem 0.45rem; border: 1px solid var(--wf-text); }
+
+/* --- Quick-win pages -------------------------------------------------------- */
+.qw-try { margin: 1rem 0 1.25rem; color: var(--wf-text-muted); }
+.qw-picker { max-width: 420px; margin-bottom: 1rem; }
+.qw-compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.qw-compare.stack { grid-template-columns: minmax(0, 1fr); }
+.qw-pane { border: 1px solid var(--wf-border); border-radius: var(--wf-radius); padding: 1.25rem; background: var(--wf-page); min-width: 0; }
+.qw-today { background: var(--wf-surface); }
+.qw-label { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; padding: 0.2rem 0.5rem; border: 1px solid var(--wf-border-strong); }
+.qw-proposed > .qw-label { background: var(--wf-text); color: var(--wf-page); border-color: var(--wf-text); }
+.qw-site { display: grid; gap: 1rem; }
+.qw-hero { min-height: 220px; }
+.qw-hero.slim { min-height: 120px; }
+.qw-search .search-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.75rem; }
+.qw-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
+.qw-tiles .wf-placeholder { min-height: 110px; }
+.qw-text { padding: 1rem; border: 1px dashed var(--wf-border-strong); color: var(--wf-text-muted); }
+.qw-marker, .qw-fold { font-size: 0.8125rem; font-weight: 700; color: #c0392b; border-top: 2px dashed #c0392b; padding-top: 0.4rem; }
+.qw-sec-head h2 { margin: 0; font-size: 1.25rem; }
+.qw-list { list-style: none; display: grid; gap: 0.35rem; }
+.qw-list li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--wf-border); }
+.qw-minis { display: grid; gap: 0.5rem; }
+.qw-mini { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 0.75rem; align-items: center; color: var(--wf-text); padding: 0.4rem; border: 1px solid var(--wf-border); background: var(--wf-page); }
+.qw-mini:hover { text-decoration: none; border-color: var(--wf-text); }
+.qw-mini .wf-placeholder { min-height: 64px; font-size: 0.625rem; }
+.qw-mini > span { display: grid; gap: 0.15rem; }
+.qw-group { border: 0; padding: 0; margin: 0 0 1rem; }
+.qw-group legend { font-weight: 600; margin-bottom: 0.5rem; }
+.qw-one { max-width: 360px; }
+.qw-one .car-card { height: auto; }
+.qw-cards4 { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.qw-trunc { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qw-specs5 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+.qw-coming { color: var(--wf-text) !important; }
+.qw-phones { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+.qw-phone { margin: 0; width: 360px; max-width: 100%; }
+.qw-phone figcaption { margin-bottom: 0.5rem; }
+.qw-screen { position: relative; height: 680px; overflow-y: auto; border: 10px solid #222; border-radius: 28px; background: var(--wf-page); padding: 0 0 1rem; }
+.qw-screen .search-band { padding: 0.75rem; display: grid; gap: 0.5rem; }
+.qw-screen .car-grid { grid-template-columns: minmax(0, 1fr); padding: 0 0.75rem; }
+.qw-phone-hero { min-height: 300px; border-radius: 0; }
+.qw-phone-hero.slim { min-height: 90px; }
+.qw-fold { margin: 0.75rem; }
+.qw-phone-bar { position: sticky; top: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: var(--wf-page); border-bottom: 1px solid var(--wf-border); margin-bottom: 0.75rem; }
+.qw-sheet { position: sticky; bottom: 0; z-index: 3; display: grid; gap: 0.6rem; padding: 1rem; background: var(--wf-page); border-top: 2px solid var(--wf-text); box-shadow: 0 -8px 24px rgba(0,0,0,0.15); }
+.qw-sheet[hidden] { display: none; }
+.qw-linkcard { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 0.75rem; align-items: center; border: 1px solid var(--wf-border); background: var(--wf-page); padding: 0.5rem; }
+.qw-linkcard.bare { grid-template-columns: minmax(0, 1fr); }
+.qw-linkcard .wf-placeholder { min-height: 72px; font-size: 0.625rem; }
+.qw-linkcard div { display: grid; gap: 0.15rem; min-width: 0; }
+.qw-linkcard span { font-size: 0.8125rem; color: var(--wf-text-muted); }
+.qw-pane .serp { margin-bottom: 1rem; }
+.qw-empty { padding: 2rem 1rem; text-align: center; border: 1px dashed var(--wf-border-strong); color: var(--wf-text-muted); }
+.qw-code pre { white-space: pre-wrap; word-break: break-word; font-size: 0.75rem; background: var(--wf-surface); padding: 0.75rem; max-height: 320px; overflow: auto; }
+.qw-code summary { cursor: pointer; font-weight: 600; }
+.qw-rich-row { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: 0.8125rem; }
+.qw-g .wf-placeholder { min-height: 260px; }
+.qw-faux-tabs { display: flex; gap: 1rem; }
+.qw-faux-tabs span { padding: 0.4rem 0; border-bottom: 2px solid var(--wf-border-strong); font-size: 0.875rem; }
+.qw-price-late { font-size: 1.125rem; }
+.qw-kf { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.qw-stickybar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; padding: 0.75rem 1rem; border: 1px solid var(--wf-text); max-width: 420px; }
+.qw-stickybar > div { display: grid; }
+.qw-chat { background: #ece5dd; padding: 1rem; border-radius: var(--wf-radius); margin: 0.75rem 0; }
+.qw-bubble { background: #dcf8c6; padding: 0.6rem; max-width: 340px; margin-left: auto; font-size: 0.875rem; overflow-wrap: anywhere; display: grid; gap: 0.5rem; }
+.qw-bubble p { margin: 0; }
+
+/* Tideway quick wins (greyscale) */
+.qw-head { padding-top: 2rem; }
+.qw-body { padding-top: 1rem; }
+.qw-faux-form { display: grid; gap: 0.5rem; margin: 0.75rem 0; }
+.qw-faux-form span { border: 1px solid var(--wf-border-strong); padding: 0.5rem 0.75rem; font-size: 0.875rem; color: var(--wf-text-muted); }
+.qw-footlinks { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; font-size: 0.8125rem; padding: 0.75rem; border: 1px solid var(--wf-border); }
+.qw-quotes { list-style: none; display: grid; gap: 0.75rem; }
+.qw-quotes li { display: grid; gap: 0.25rem; justify-items: start; }
+.qw-quotes q { font-style: italic; }
+.qw-read { min-height: 1.5em; font-weight: 600; }
+.qw-tiny { font-size: 0.8125rem; opacity: 0.9; }
+.qw-run { font-size: 0.9375rem; line-height: 1.5; }
+.qw-caps { list-style: none; display: grid; gap: 0.35rem; font-size: 0.8125rem; }
+.qw-exception { white-space: pre-wrap; word-break: break-word; font-size: 0.75rem; background: var(--wf-surface); border: 1px dashed #c0392b; padding: 0.75rem; }
+.qw-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; margin-top: 0.75rem; }
+.qw-gallery .qw-empty { grid-column: 1 / -1; }
+.qw-one { max-width: 360px; }
+.qw-two { display: grid; gap: 0.75rem; }
+.qw-share { display: grid; gap: 0.35rem; border: 1px solid var(--wf-border); padding: 0.75rem; max-width: 420px; }
+.qw-share .wf-placeholder.logo { min-height: 120px; }
+.qw-share span { font-size: 0.8125rem; color: var(--wf-text-muted); }
+[data-qw="snip"] > .seg { margin-bottom: 1rem; }
+[data-qw="diff"] > .btn { margin-bottom: 1rem; }
+[data-qw="diff"] mark { background: transparent; color: inherit; }
+[data-qw="diff"].qw-diff-on .qw-today mark { background: #fdecea; text-decoration: line-through; text-decoration-color: #c0392b; }
+[data-qw="diff"].qw-diff-on .qw-proposed mark { background: #e3f3f0; }
+.qw-today mark { background: transparent; }
+.qw-outline { list-style: none; display: grid; gap: 0.35rem; font-size: 0.9375rem; }
+.qw-outline .h1 { font-weight: 700; }
+.qw-outline .h2 { padding-left: 1rem; }
+.qw-outline .h3 { padding-left: 2rem; color: var(--wf-text-muted); }
+.qw-cookie { border-top: 3px solid var(--wf-text); padding: 1rem; background: var(--wf-surface); display: grid; gap: 0.75rem; }
+.qw-swatch { display: grid; gap: 0.75rem; }
+.qw-swatch p { margin: 0; padding: 0.75rem; font-size: 0.9375rem; display: flex; justify-content: space-between; gap: 1rem; background: #fff; }
+.qw-swatch p.on-grey { background: #f5f5f5; }
+.qw-teal-old { color: #00a88f; }
+.qw-teal-new { color: #00796a; }
+.qw-pane .data-table { min-width: 0; }
+.qw-pane .counter b { font-size: clamp(1.75rem, 7vw, 3rem); overflow-wrap: anywhere; }
+.qw-pane .seg, [data-qw] > .seg { flex-wrap: wrap; max-width: 100%; }
+.qw-list li, .qw-caps li, .qw-run, .qw-quotes q { overflow-wrap: anywhere; min-width: 0; }
+.qw-list li { flex-wrap: wrap; }
+.qw-pane .data-table td, .qw-pane .data-table th { overflow-wrap: anywhere; word-break: break-word; }
+@media (max-width: 768px) { .qw-compare { grid-template-columns: minmax(0, 1fr); } }
+.qw-jump-li { display: flex; align-items: center; align-self: center; }
+.qw-jump select { margin: 0; }

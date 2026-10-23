@@ -1,5 +1,5 @@
 /* ==========================================================================
-   theme.css: Tideway design layer (V2)
+   theme.css: Tideway design layer
 
    Applies the Tideway design system (measured on tideway.london, 13 Oct 2026)
    on top of the structural wireframe CSS. Nothing in base.css, components.css
@@ -438,3 +438,37 @@ body.hub .hub-hero::after { content: ''; position: absolute; left: 0; right: 0; 
 #rs-map .map-pin { font-size: 0.8125rem; padding: 0.2rem 0.45rem; }
 #rs-map .map-pin.below { transform: translate(-50%, 0); }
 .tide-box h3 { font-family: var(--tw-ui); font-weight: 800; text-transform: uppercase; font-size: 1.3125rem; }
+
+/* --------------------------------------------------------------------------
+   Two tabs and the Quick wins tab
+   -------------------------------------------------------------------------- */
+.proto-tabs { background: var(--tw-slate); border-bottom: 0; }
+.proto-tabs a { color: #e3eaed; font-family: var(--tw-ui); font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.55rem 0.9rem 0.45rem; border-bottom-width: 3px; text-decoration: none; }
+.proto-tabs a:first-child { padding-left: 0; }
+.proto-tabs a:hover { color: #fff; }
+.proto-tabs a[aria-current="true"] { color: #fff; border-bottom-color: var(--tw-teal); }
+.proto-tabs a:focus-visible { outline-color: #fff; }
+.qw-jump { font-family: var(--tw-ui); font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--tw-slate-text); }
+.qw-jump select { font-family: var(--tw-body); text-transform: none; height: 40px; border-radius: 0; padding-right: 2.25rem; }
+.qw-card { border: 0; border-top: 6px solid var(--tw-teal); border-radius: 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 1.5rem; }
+.qw-card h3 a { font-family: var(--tw-display); font-weight: 400; text-transform: uppercase; color: var(--tw-teal-deep); text-decoration: none; font-size: 1.375rem; line-height: 1.1; }
+.qw-num { background: var(--tw-slate); color: #fff; border: 0; font-family: var(--tw-ui); font-weight: 800; letter-spacing: 0.08em; padding: 0.25rem 0.55rem; }
+.qw-theme { margin-top: 3rem; }
+.qw-head.page-head { padding: 2.5rem 0 4rem; }
+.qw-try { color: var(--tw-slate-text); background: var(--tw-teal-tint); border-left: 4px solid var(--tw-teal-deep); padding: 0.6rem 0.9rem; }
+.qw-pane { border: 0; border-radius: 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 1.5rem; }
+.qw-today { background: var(--tw-mist); box-shadow: none; }
+.qw-label { border-radius: 0; border: 2px solid var(--tw-slate); color: var(--tw-slate); font-family: var(--tw-ui); font-weight: 800; letter-spacing: 0.1em; }
+.qw-proposed > .qw-label { background: var(--tw-teal-deep); border-color: var(--tw-teal-deep); color: #fff; }
+.qw-pane h3, .qw-pane h4 { font-family: var(--tw-ui); font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; }
+.qw-marker { color: var(--tw-red); border-top-color: var(--tw-red); font-family: var(--tw-ui); text-transform: uppercase; letter-spacing: 0.04em; }
+.qw-text { border-color: var(--tw-rule); }
+.qw-footlinks { font-family: var(--tw-ui); font-weight: 700; color: var(--tw-teal-deep); border-color: var(--tw-mist-2); background: #fff; }
+.qw-cookie { border-top-color: var(--tw-teal); background: #fff; box-shadow: 0 -4px 14px rgba(0,0,0,0.08); }
+.qw-share { border: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); background: #fff; }
+.qw-exception { border-color: var(--tw-red); background: #fff; font-family: ui-monospace, Menlo, Consolas, monospace; }
+.qw-counter-today .counter, .qw-sea.counter { background: var(--tw-sea); }
+.qw-outline .h1 { color: var(--tw-teal-deep); }
+.qw-pane .counter { padding-top: 2.5rem; }
+.qw-pane .counter::before { background: var(--tw-mist); }
+.qw-proposed .counter::before { background: #fff; }

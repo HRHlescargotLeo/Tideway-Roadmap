@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tideway prototypes – quick wins</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/theme.css">
+</head>
+<body class="hub">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Tideway's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <!-- Two tabs: the five big improvements and the quick wins (R09) -->
+    <div class="proto-tabs">
+      <div class="container">
+        <nav aria-label="Prototype sets">
+          <a href="./index.html" data-tab-link="big">Big improvements</a>
+          <a href="./quick-wins.html" data-tab-link="qw">Quick wins</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="./index.html" aria-label="Tideway prototypes, overview">tideway <span>prototypes</span></a>
+      <nav aria-label="Prototypes" data-set="big">
+        <ul class="proto-links">
+          <li><a href="./index.html" data-proto="index">Overview</a></li>
+          <li><a href="./pages/home.html" data-proto="home who-does-what"><span class="n">1</span> It's working</a></li>
+          <li><a href="./pages/river-health.html" data-proto="river-health overflow"><span class="n">2</span> River health</a></li>
+          <li><a href="./pages/near-me.html" data-proto="near-me site contact"><span class="n">3</span> Near me</a></li>
+          <li><a href="./pages/riverside.html" data-proto="riverside space"><span class="n">4</span> Visit the riverside</a></li>
+          <li><a href="./pages/documents.html" data-proto="documents"><span class="n">5</span> Find a document</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Quick wins" data-set="qw" hidden>
+        <ul class="proto-links">
+          <li><a href="./quick-wins.html" data-proto="quick-wins">Overview</a></li>
+          <li class="qw-jump-li"><label class="qw-jump"><span>Quick win</span><select data-qw-jump aria-label="Go to a quick win"></select></label></li>
+        </ul>
+        <ul class="qw-seq" hidden>
+          <li><a href="./pages/qw-01.html" data-proto="qw-01">QW1 Who does what now</a></li>
+          <li><a href="./pages/qw-02.html" data-proto="qw-02">QW2 Task links on the homepage</a></li>
+          <li><a href="./pages/qw-03.html" data-proto="qw-03">QW3 Search snippets</a></li>
+          <li><a href="./pages/qw-04.html" data-proto="qw-04">QW4 One completion date</a></li>
+          <li><a href="./pages/qw-05.html" data-proto="qw-05">QW5 Real number in the counter</a></li>
+          <li><a href="./pages/qw-06.html" data-proto="qw-06">QW6 How we count this</a></li>
+          <li><a href="./pages/qw-07.html" data-proto="qw-07">QW7 Fix the server error</a></li>
+          <li><a href="./pages/qw-08.html" data-proto="qw-08">QW8 Liaison group record</a></li>
+          <li><a href="./pages/qw-09.html" data-proto="qw-09">QW9 Readable document names</a></li>
+          <li><a href="./pages/qw-10.html" data-proto="qw-10">QW10 Tideway Prize page</a></li>
+          <li><a href="./pages/qw-11.html" data-proto="qw-11">QW11 Annual reports in order</a></li>
+          <li><a href="./pages/qw-12.html" data-proto="qw-12">QW12 About Us up to date</a></li>
+          <li><a href="./pages/qw-13.html" data-proto="qw-13">QW13 Corporate Info</a></li>
+          <li><a href="./pages/qw-14.html" data-proto="qw-14">QW14 Expired vacancies</a></li>
+          <li><a href="./pages/qw-15.html" data-proto="qw-15">QW15 Main headings</a></li>
+          <li><a href="./pages/qw-16.html" data-proto="qw-16">QW16 Reject all cookies</a></li>
+          <li><a href="./pages/qw-17.html" data-proto="qw-17">QW17 Teal that passes contrast</a></li>
+          <li><a href="./pages/qw-18.html" data-proto="qw-18">QW18 Share links</a></li>
+          <li><a href="./pages/qw-19.html" data-proto="qw-19">QW19 Proofreading pass</a></li>
+          <li><a href="./pages/qw-20.html" data-proto="qw-20">QW20 Broken requests</a></li>
+
+        </ul>
+      </nav>
+      <!-- Notes switch (R03) -->
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- Quick wins overview (R09) -->
+  <div class="hub-hero">
+    <div class="container">
+      <div class="hub-brand"><span class="wf-placeholder logo">Tideway logo</span></div>
+      <h1>20 quick wins for tideway.london</h1>
+      <p class="lead">Smaller changes that can each be made on their own, without any of the five big improvements. Each one has its own page showing just that change, with today's version beside the proposed one.</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="container">
+      <section class="qw-theme" aria-labelledby="t-now"><h2 class="hub-h2" id="t-now">Saying what's true now</h2><ol class="qw-cards"><li class="qw-card"><span class="qw-num">QW1</span><h3><a href="./pages/qw-01.html">Who does what now</a></h3><p>One page that says which enquiries now go to Thames Water and which stay with Tideway.</p><p class="proto-try"><strong>Try:</strong> Pick “There’s a smell near a shaft”, then “Noise from works near me”.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-01.html">Open</a></li><li class="qw-card"><span class="qw-num">QW2</span><h3><a href="./pages/qw-02.html">Task links on the homepage</a></h3><p>Six links under the homepage hero for the jobs people come to do.</p><p class="proto-try"><strong>Try:</strong> Compare where “What’s happening near me?” sits on each homepage.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-02.html">Open</a></li><li class="qw-card"><span class="qw-num">QW3</span><h3><a href="./pages/qw-03.html">Search snippets that describe today</a></h3><p>Titles, descriptions and share images written for a tunnel that's working.</p><p class="proto-try"><strong>Try:</strong> Switch between “Search result” and “Link preview” on both sides.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-03.html">Open</a></li><li class="qw-card"><span class="qw-num">QW4</span><h3><a href="./pages/qw-04.html">One completion date, told the same way everywhere</a></h3><p>The same milestones on the homepage, The Tunnel and the Timeline.</p><p class="proto-try"><strong>Try:</strong> Switch the page in the proposed version and check the milestones stay the same.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-04.html">Open</a></li></ol></section><section class="qw-theme" aria-labelledby="t-numbers"><h2 class="hub-h2" id="t-numbers">The numbers</h2><ol class="qw-cards"><li class="qw-card"><span class="qw-num">QW5</span><h3><a href="./pages/qw-05.html">The real number in the counter</a></h3><p>22.2 million tonnes in the page itself, animated only when motion is welcome.</p><p class="proto-try"><strong>Try:</strong> Press “What a search engine reads” on each side, then replay the animation.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-05.html">Open</a></li><li class="qw-card"><span class="qw-num">QW6</span><h3><a href="./pages/qw-06.html">How we count this, in plain English</a></h3><p>A short explanation beside the counter, instead of a 13px footnote.</p><p class="proto-try"><strong>Try:</strong> Open “How we count this” under the proposed counter.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-06.html">Open</a></li></ol></section><section class="qw-theme" aria-labelledby="t-sites"><h2 class="hub-h2" id="t-sites">Neighbours and site pages</h2><ol class="qw-cards"><li class="qw-card"><span class="qw-num">QW7</span><h3><a href="./pages/qw-07.html">Fix the server error on Chambers Wharf</a></h3><p>The site page prints a .NET exception where its content should be.</p><p class="proto-try"><strong>Try:</strong> Compare the middle of the two Chambers Wharf pages.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-07.html">Open</a></li><li class="qw-card"><span class="qw-num">QW8</span><h3><a href="./pages/qw-08.html">A liaison group record you can scan</a></h3><p>Meetings as a table, newest first, with the next date or a note that the group has closed.</p><p class="proto-try"><strong>Try:</strong> Find the most recent meeting's notes on each side.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-08.html">Open</a></li><li class="qw-card"><span class="qw-num">QW9</span><h3><a href="./pages/qw-09.html">Readable document names</a></h3><p>Plain titles with type, size and date, instead of file names in capitals.</p><p class="proto-try"><strong>Try:</strong> Compare the two document lists.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-09.html">Open</a></li><li class="qw-card"><span class="qw-num">QW10</span><h3><a href="./pages/qw-10.html">A page for the Tideway Prize</a></h3><p>How to enter, the key dates and a gallery, instead of a single news story.</p><p class="proto-try"><strong>Try:</strong> Switch the gallery between “Shortlist” and “Winners”.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-10.html">Open</a></li></ol></section><section class="qw-theme" aria-labelledby="t-records"><h2 class="hub-h2" id="t-records">Company facts and records</h2><ol class="qw-cards"><li class="qw-card"><span class="qw-num">QW11</span><h3><a href="./pages/qw-11.html">Annual reports in order and up to date</a></h3><p>Every year, newest first, including 2023-24 to 2025-26.</p><p class="proto-try"><strong>Try:</strong> Find the latest annual report on each side.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-11.html">Open</a></li><li class="qw-card"><span class="qw-num">QW12</span><h3><a href="./pages/qw-12.html">Bring About Us up to date</a></h3><p>Present-tense copy and one set of checked figures.</p><p class="proto-try"><strong>Try:</strong> Press “Show what’s changed”.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-12.html">Open</a></li><li class="qw-card"><span class="qw-num">QW13</span><h3><a href="./pages/qw-13.html">Corporate Info that agrees with About Us</a></h3><p>One company summary used on both pages.</p><p class="proto-try"><strong>Try:</strong> Switch between the two pages in the proposed version.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-13.html">Open</a></li><li class="qw-card"><span class="qw-num">QW14</span><h3><a href="./pages/qw-14.html">No more expired vacancies</a></h3><p>Closed roles come down by themselves, with a job alert in their place.</p><p class="proto-try"><strong>Try:</strong> Sign up for job alerts in the proposed version.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-14.html">Open</a></li></ol></section><section class="qw-theme" aria-labelledby="t-fix"><h2 class="hub-h2" id="t-fix">Accessibility and housekeeping</h2><ol class="qw-cards"><li class="qw-card"><span class="qw-num">QW15</span><h3><a href="./pages/qw-15.html">A main heading on every page</a></h3><p>One H1 per page, so screen readers and search engines know what the page is.</p><p class="proto-try"><strong>Try:</strong> Compare the two heading outlines.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-15.html">Open</a></li><li class="qw-card"><span class="qw-num">QW16</span><h3><a href="./pages/qw-16.html">A cookie banner with “Reject all”</a></h3><p>Rejecting non-essential cookies as easy as accepting them.</p><p class="proto-try"><strong>Try:</strong> Press “Reject all” on the proposed banner.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-16.html">Open</a></li><li class="qw-card"><span class="qw-num">QW17</span><h3><a href="./pages/qw-17.html">Teal text that passes contrast</a></h3><p>A deeper teal for small text and links; the brand teal stays for headings and fills.</p><p class="proto-try"><strong>Try:</strong> Compare the small labels and links on white and on grey.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-17.html">Open</a></li><li class="qw-card"><span class="qw-num">QW18</span><h3><a href="./pages/qw-18.html">Share links that work</a></h3><p>https addresses, and no old agency account in the X share.</p><p class="proto-try"><strong>Try:</strong> Copy the proposed share link.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-18.html">Open</a></li><li class="qw-card"><span class="qw-num">QW19</span><h3><a href="./pages/qw-19.html">A proofreading pass</a></h3><p>Typos, “click here” links, run-together tags and numeric dates.</p><p class="proto-try"><strong>Try:</strong> Press “Show what’s changed”.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-19.html">Open</a></li><li class="qw-card"><span class="qw-num">QW20</span><h3><a href="./pages/qw-20.html">Clear the broken requests</a></h3><p>No more requests for missing files, and a monthly check that catches new ones.</p><p class="proto-try"><strong>Try:</strong> Compare the two lists of failed requests.</p><a class="btn btn-secondary btn-sm" href="./pages/qw-20.html">Open</a></li></ol></section>
+      <section class="hub-notes" aria-labelledby="review-title">
+        <div>
+          <h2 class="hub-h2" id="review-title">How to review</h2>
+          <ul>
+            <li>"Today" is rebuilt from what we saw on the live site; "Proposed" is the change. Everything else is kept the same, so the difference is the change itself.</li>
+            <li>Use <strong>Quick win</strong> in the bar at the top to jump to any of them, or the previous and next links at the foot of each page.</li>
+            <li>Switch <strong>Notes on</strong> to see what each quick win proposes and why, with notes on behaviour and open questions for Tideway.</li>
+            <li>10 of these also appear inside the five <a href="./index.html">big improvements</a>. Here each one stands alone, so they can be chosen separately.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Tideway's own footer, R02) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Site names and published figures are Tideway's; statuses, notices, events and monthly figures are sample data · Photography © Tideway</p>
+    </div>
+  </footer>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/wireframe.js"></script>
+  <script src="./js/photos.js"></script>
+</body>
+</html>

@@ -12,9 +12,18 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <!-- Prototype navigator (replaces Tideway's own header, R01) -->
   <header class="sticky site-header proto-nav">
+    <!-- Two tabs: the five big improvements and the quick wins (R09) -->
+    <div class="proto-tabs">
+      <div class="container">
+        <nav aria-label="Prototype sets">
+          <a href="../index.html" data-tab-link="big">Big improvements</a>
+          <a href="../quick-wins.html" data-tab-link="qw">Quick wins</a>
+        </nav>
+      </div>
+    </div>
     <div class="container proto-nav-row">
       <a class="proto-home" href="../index.html" aria-label="Tideway prototypes, overview">tideway <span>prototypes</span></a>
-      <nav aria-label="Prototypes">
+      <nav aria-label="Prototypes" data-set="big">
         <ul class="proto-links">
           <li><a href="../index.html" data-proto="index">Overview</a></li>
           <li><a href="../pages/home.html" data-proto="home who-does-what"><span class="n">1</span> It's working</a></li>
@@ -24,6 +33,36 @@
           <li><a href="../pages/documents.html" data-proto="documents"><span class="n">5</span> Find a document</a></li>
         </ul>
       </nav>
+      <nav aria-label="Quick wins" data-set="qw" hidden>
+        <ul class="proto-links">
+          <li><a href="../quick-wins.html" data-proto="quick-wins">Overview</a></li>
+          <li class="qw-jump-li"><label class="qw-jump"><span>Quick win</span><select data-qw-jump aria-label="Go to a quick win"></select></label></li>
+        </ul>
+        <ul class="qw-seq" hidden>
+          <li><a href="../pages/qw-01.html" data-proto="qw-01">QW1 Who does what now</a></li>
+          <li><a href="../pages/qw-02.html" data-proto="qw-02">QW2 Task links on the homepage</a></li>
+          <li><a href="../pages/qw-03.html" data-proto="qw-03">QW3 Search snippets</a></li>
+          <li><a href="../pages/qw-04.html" data-proto="qw-04">QW4 One completion date</a></li>
+          <li><a href="../pages/qw-05.html" data-proto="qw-05">QW5 Real number in the counter</a></li>
+          <li><a href="../pages/qw-06.html" data-proto="qw-06">QW6 How we count this</a></li>
+          <li><a href="../pages/qw-07.html" data-proto="qw-07">QW7 Fix the server error</a></li>
+          <li><a href="../pages/qw-08.html" data-proto="qw-08">QW8 Liaison group record</a></li>
+          <li><a href="../pages/qw-09.html" data-proto="qw-09">QW9 Readable document names</a></li>
+          <li><a href="../pages/qw-10.html" data-proto="qw-10">QW10 Tideway Prize page</a></li>
+          <li><a href="../pages/qw-11.html" data-proto="qw-11">QW11 Annual reports in order</a></li>
+          <li><a href="../pages/qw-12.html" data-proto="qw-12">QW12 About Us up to date</a></li>
+          <li><a href="../pages/qw-13.html" data-proto="qw-13">QW13 Corporate Info</a></li>
+          <li><a href="../pages/qw-14.html" data-proto="qw-14">QW14 Expired vacancies</a></li>
+          <li><a href="../pages/qw-15.html" data-proto="qw-15">QW15 Main headings</a></li>
+          <li><a href="../pages/qw-16.html" data-proto="qw-16">QW16 Reject all cookies</a></li>
+          <li><a href="../pages/qw-17.html" data-proto="qw-17">QW17 Teal that passes contrast</a></li>
+          <li><a href="../pages/qw-18.html" data-proto="qw-18">QW18 Share links</a></li>
+          <li><a href="../pages/qw-19.html" data-proto="qw-19">QW19 Proofreading pass</a></li>
+          <li><a href="../pages/qw-20.html" data-proto="qw-20">QW20 Broken requests</a></li>
+
+        </ul>
+      </nav>
+      <!-- Notes switch (R03) -->
       <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
         <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
         <span class="notes-label">Notes off</span>
@@ -125,7 +164,7 @@
   <footer class="proto-footer">
     <div class="container">
       <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
-      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Site names and published figures are Tideway's; statuses, notices, events and monthly figures are sample data · Photography © Tideway</p>
+      <p class="wf-meta">Site names and published figures are Tideway's; statuses, notices, events and monthly figures are sample data · Photography © Tideway</p>
     </div>
   </footer>
 

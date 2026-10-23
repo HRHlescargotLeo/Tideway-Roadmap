@@ -1,5 +1,5 @@
 /* ==========================================================================
-   photos.js: Tideway photography for the design layer (V2)
+   photos.js: Tideway photography for the design layer
 
    Swaps the illustrated placeholders for Tideway's own photography, loaded
    directly from tideway.london. Each image is applied only once it has
@@ -52,7 +52,10 @@
     'video · 1:38': u('6769/final-tunnel-shots-2-3.png', 900),
     'video · 2:22': u('3646/chambers.jpg', 900),
     'video · 4:12': u('6895/ttt_mjp_8305_chl_apprentice.jpg', 900),
-    'photo': u('7744/tideway-king-edward-park_026.jpg', 900)
+    'photo': u('7744/tideway-king-edward-park_026.jpg', 900),
+    "video: london's super sewer": u('7746/tideway-king-edward-park_037.jpg', 1200),
+    'photo: the new riverside at wapping': u('7744/tideway-king-edward-park_026.jpg', 900),
+    'tideway prize artwork': u('7765/ttp-thumbnail.jpg', 700)
   };
 
   function apply(el, src, cls) {
